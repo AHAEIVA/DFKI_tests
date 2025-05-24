@@ -1,0 +1,57 @@
+# Cline Rules: Tether Planner Project
+
+This file captures project-specific patterns, preferences, and intelligence learned during development.
+
+## Key Implementation Patterns
+*   *(Document recurring coding patterns, e.g., how ROS publishers/subscribers are typically initialized, how OMPL states are handled)*
+
+## User Preferences & Workflow
+*   *(Note user preferences, e.g., preferred logging levels, specific data formats, common analysis tasks)*
+*   Standard topics for analysis extraction: `/rope_path` (visualization_msgs/Marker), `/mobula/rov/odometry` (nav_msgs/Odometry), `/mobula/rov/orientation` (geometry_msgs/Vector3Stamped).
+
+## Project-Specific Conventions
+*   *(Document naming conventions, configuration file locations, common parameters)*
+*   Memory Bank location: `./memory-bank/`
+
+## Known Challenges & Solutions
+*   *(Record tricky parts of the codebase, workarounds, or common pitfalls)*
+*   (2025-04-04): ROS bag `results/rosbags/2025-04-04-12-49-02.bag` causes deserialization errors (`unpack requires a buffer`) with `rostopic echo -p` and `rosbag` Python library reads, preventing direct data extraction to text files. However, `rosbag play` works, and `rosbag check` reports no required migrations. Suggests subtle corruption or definition mismatch not caught by `check`.
+
+*   Workaround: Use `rosbag play` to replay the bag and `rostopic echo` to extract data:
+    ```bash
+    rosbag play results/rosbags/2025-04-04-12-49-02.bag
+    rostopic echo /mobula/rov/odometry > results/odom.txt
+    ```
+
+## Decision Log
+*   *(Summarize key decisions and their rationale, linking to Memory Bank files if needed)*
+*   (2025-04-04): Established Memory Bank structure before proceeding with the initial task due to interruption and missing context.
+
+## Tool Usage Patterns
+*   *(Note common sequences of tool usage for specific tasks)*
+*   **ROS Bag Data Extraction & Processing Workflow (as of 2025-04-06):**
+    1.  Extract raw topic data from bag files into `.txt` files (YAML stream format) using `rostopic echo /topic_name > output.txt` (preferably via `rosbag play` + `rostopic echo` due to potential bag issues, see Known Challenges).
+    2.  Process the `.txt` files into structured `.csv` files using `process_ros_txt_to_csv.py`. This script handles Odometry, Orientation (Vector3Stamped, converted to degrees), and Tether Path (Marker) messages.
+        ```bash
+        python3 process_ros_txt_to_csv.py \\
+          --odom-txt <path_to_odom.txt> \\
+          --orient-txt <path_to_orient.txt> \\
+          --tether-txt <path_to_tether.txt> \\
+          --odom-csv <path_to_output_odom.csv> \\
+          --orient-csv <path_to_output_orient.csv> \\
+          --tether-csv <path_to_output_tether.csv>
+        ```
+    3.  Organize processed CSV files into run-specific subdirectories (e.g., `results/runX/planner_name/`).
+    4.  Visualize a single run using `simulate_trajectory.py`, pointing `--data-dir` to the run-specific subdirectory.
+        ```bash
+        python3 simulate_trajectory.py --data-dir <path_to_run_specific_dir>
+        ```
+    5.  Compare two processed runs using `compare_planner_runs.py`.
+        ```bash
+        python3 compare_planner_runs.py \
+          --data-dir1 <path_to_run1_dir> --name1 <planner1_name> \
+          --data-dir2 <path_to_run2_dir> --name2 <planner2_name> \
+          --l-max <max_tether_length> \
+          --stl-path <path_to_env_stl> \
+          --output-dir results/comparison_output # Optional output dir
+        ```

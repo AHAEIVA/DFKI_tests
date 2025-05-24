@@ -1,0 +1,5 @@
+models/
+results/rosbags/
+results/*.txt
+results/**/*.csv
+results/run*/

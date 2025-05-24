@@ -1,0 +1,6 @@
+simulation:
+  time_step: 1.0
+  ta_planner_on: true
+  use_nvblox: true
+  model: "eiva_logo"     # options: "eiva_logo", "pipe", "aeroplane", "oil_rig"
+  model_scale: 1.0     
