@@ -35,6 +35,20 @@ roslaunch mocap_qualisys qualisys.launch server_address:="192.168.0.154" udp_por
 
 ---
 
+
+### Run Simulation vs Real Robot 
+real robot
+```bash
+roslaunch bluerov2_nmpc bluerov2_nmpc.launch
+```
+simulation
+```bash
+roslaunch bluerov2_nmpc bluerov2_nmpc.launch odom_source:=mobula
+```
+
+
+
+
 ### 4. Run Controller and Trajectory Generation
 
 Navigate to your `catkin_ws`:
