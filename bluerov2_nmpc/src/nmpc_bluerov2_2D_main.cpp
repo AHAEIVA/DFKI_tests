@@ -443,8 +443,8 @@ int main(int argc, char** argv)
 
             // Setting up state-feedback [x,y,z,u,v,w,psi,r]
             current_states = {current_pos_att.at(0),
-                              -current_pos_att.at(1),
-                              -current_pos_att.at(2),
+                              (odom_source == "mobula") ?current_pos_att.at(1) : -current_pos_att.at(1),
+                             (odom_source == "mobula") ?current_pos_att.at(2) : -current_pos_att.at(2),
                               current_vel_rate.at(0),
                               current_vel_rate.at(1),
                               current_vel_rate.at(2),
