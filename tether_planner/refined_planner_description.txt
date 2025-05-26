@@ -1,0 +1,142 @@
+\section{Online Entanglement-Aware Path Planner}
+\label{sec:planner}
+
+In this section, we present the online entanglement-aware path planner, a local planner designed to handle real-time adjustments for an autonomous system navigating with a tether. The planner operates in an online manner, continuously monitoring the tether configuration and adapting the \ac{ROV}'s path to avoid exceeding the maximum allowable tether length, \( L_{\text{max}} \), while ensuring safe, collision-free motion towards a sequence of reference waypoints.
+
+At each time step \( t \), the planner utilizes the current estimated tether configuration, represented as a sequence of nodes \( \mathbf{P}(t) = \{ p_i(t) \}_{i=1}^{N} \), where each \( p_i(t) \in \mathbb{R}^3 \) is the position of the \( i \)-th node, \( p_N(t) \) corresponds to the \ac{ROV}'s current position \( \mathbf{p}_{\text{rov}}(t) \), and \( p_1(t) \) is the tether's anchor point. The planner also maintains a list of reference waypoints \( \mathbf{W} = \{\mathbf{p}_{\text{waypoint}}(k)\}_{k=1}^{M} \), where \( \mathbf{p}_{\text{waypoint}}(k) \in \mathbb{R}^3 \) denotes the \( k \)-th target waypoint.
+
+The core operation involves calculating the current tether length:
+\[
+L_{\text{tether}}(t) = \sum_{i=1}^{N-1} \| p_i(t) - p_{i+1}(t) \|
+\label{eq:tether_length}
+\]
+where \( \| \cdot \| \) denotes the Euclidean norm. This length is compared against the predefined maximum allowable length \( L_{\text{max}} \).
+
+\subsection{Nominal Operation (Non-Exceedance Condition)}
+If the tether length constraint is satisfied, i.e., \( L_{\text{tether}}(t) \leq L_{\text{max}} \), the planner operates in its nominal mode. It identifies the next reference waypoint \( \mathbf{p}_{\text{waypoint}}(k) \) from the list \( \mathbf{W} \) that has not yet been reached and directs the \ac{ROV} controller towards it. The system proceeds sequentially through the waypoints as long as the tether constraint remains satisfied.
+
+\begin{figure*}[t] % Use * for double-column width
+    \centering
+    \includegraphics[width=\textwidth]{EA-Planner/figures/planner.pdf} % Adjust width as needed (Placeholder path)
+    \caption{Illustration of the entanglement-aware planning process. When the nominal path to the next waypoint \( \mathbf{p}_{\text{waypoint}}(k) \) would violate the tether length constraint (hypothetical path \( \mathbf{P}^{r_1} \)), the planner searches backward along the current tether configuration \( \mathbf{P}(t) \). It identifies a suitable recovery path segment (e.g., from \( p_N(t) \) back to \( p_{i+2}(t) \)) that initiates a maneuver (\( \mathbf{P}^{r_2} \)) allowing the system to eventually reach \( \mathbf{p}_{\text{waypoint}}(k) \) while respecting \( L_{\text{max}} \).}
+    \label{fig:planner}
+\end{figure*}
+
+\subsection{Entanglement Avoidance Strategy}
+If the tether length exceeds the maximum allowable limit, \( L_{\text{tether}}(t) > L_{\text{max}} \), the entanglement avoidance strategy is activated. This strategy aims to guide the \ac{ROV} along a temporary recovery path to alleviate the tether tension before resuming navigation towards the original target waypoint.
+
+The planner initiates a search for a suitable recovery path by iteratively evaluating potential path modifications based on the current tether configuration \( \mathbf{P}(t) \). Starting from the \ac{ROV}'s end of the tether (node \( p_{N-1}(t) \)) and moving backward towards the anchor point \( p_1(t) \), the planner considers each node \( p_i(t) \) as a potential pivot point. For each \( i \), a candidate alternative trajectory is implicitly generated, consisting of the segment from the \ac{ROV} back to \( p_i(t) \) followed by a newly planned path segment from \( p_i(t) \) to the current target waypoint \( \mathbf{p}_{\text{waypoint}}(k) \). The planner computes the estimated length of this candidate alternative tether configuration.
+
+A recovery path is selected based on length criteria: the planner seeks a pivot point \( p_i(t) \) such that the corresponding alternative path length is significantly shorter than \( L_{\text{max}} \) (e.g., \( < 0.7 L_{\text{max}} \)) and offers substantial improvement compared to alternatives generated using nearby pivot points (e.g., \( p_{i-3}(t) \)). Once such an index \( i \) is found, the recovery path segment \( \mathbf{P}_{\text{recovery}} \) is defined as the portion of the current tether from the \ac{ROV} back to a point slightly further back along the tether, specifically \( p_{i+2}(t) \). This segment represents the initial trajectory the \ac{ROV} must follow to begin resolving the entanglement. If no suitable recovery path is found during the backward search, a direct path from the \ac{ROV}'s current position to the goal waypoint is generated as a fallback.
+
+\subsection{Recovery Path Refinement and Execution}
+The initially selected recovery path \( \mathbf{P}_{\text{recovery}} \) undergoes further refinement to enhance safety and smoothness before execution. This involves several steps:
+\begin{enumerate}
+    \item \textbf{Centroid Offsetting:} Points along \( \mathbf{P}_{\text{recovery}} \) are pushed slightly outwards, away from the path's geometric centroid, to increase clearance from potential obstacles near the path's center.
+    \item \textbf{Random Sampling Perturbation:} Points are locally perturbed by sampling in random directions, seeking nearby collision-free states to potentially escape minor constraint violations or local minima.
+    \item \textbf{Polynomial Smoothing:} A polynomial function (e.g., 3rd order) is fitted to segments of the path to generate a smoother trajectory, reducing sharp turns and improving dynamic feasibility.
+\end{enumerate}
+The resulting refined path is denoted as \( \mathbf{P}_{\text{safe}} \).
+
+The planner then checks if \( \mathbf{P}_{\text{safe}} \) is collision-free using the state validity checker. If the entanglement strategy is active and \( \mathbf{P}_{\text{safe}} \) is valid, the controller is directed to follow points sequentially along \( \mathbf{P}_{\text{safe}} \). Once the \ac{ROV} reaches the end of \( \mathbf{P}_{\text{safe}} \), the entanglement avoidance strategy is deactivated, and the planner reverts to nominal operation, targeting the next waypoint from the original list \( \mathbf{W} \). If \( \mathbf{P}_{\text{safe}} \) is found to be invalid (e.g., due to collisions introduced during refinement), the system continues targeting the original waypoint \( \mathbf{p}_{\text{waypoint}}(k) \), relying on lower-level collision avoidance or requiring further planning cycles.
+
+\subsection{Algorithmic Representation}
+
+The core logic can be summarized in the following algorithms. Algorithm~\ref{alg:main_loop} outlines the main planning cycle, Algorithm~\ref{alg:search_alternative} details the search for the recovery path, and Algorithm~\ref{alg:refine_path} describes the path refinement process.
+
+\begin{algorithm}[H]
+\caption{Online Entanglement-Aware Path Planning}
+\label{alg:main_loop}
+\SetAlgoLined
+\SetKwInOut{Input}{Input}
+\SetKwInOut{Output}{Output}
+\Input{
+Waypoints $\mathbf{W}$,
+Maximum tether length $L_{\max}$,
+Current Tether Configuration $\mathbf{P}(t)$,
+Current \ac{ROV} Position $\mathbf{p}_{\text{rov}}(t)$,
+Current Waypoint Index $k$
+}
+\Output{Target point for controller $\mathbf{p}_{\text{target}}$}
+\BlankLine
+    \State Compute $L_{\text{tether}}(t)$ from $\mathbf{P}(t)$ using Eq.~\ref{eq:tether_length}
+    \If{$L_{\text{tether}}(t) > L_{\max}$ \textbf{and not} finding\_safe\_path}
+        \State finding\_safe\_path $\gets$ True
+        \State $\mathbf{P}_{\text{recovery}} \gets \text{SearchAlternativePath}(\mathbf{P}(t), \mathbf{W}[k], L_{\max})$
+        \State $\mathbf{P}_{\text{safe}} \gets \text{RefineRecoveryPath}(\mathbf{P}_{\text{recovery}})$
+        \State path\_is\_safe $\gets \text{CheckPathValidity}(\mathbf{P}_{\text{safe}})$
+        \State safe\_path\_index $\gets 0$
+    \EndIf
+
+    \If{finding\_safe\_path \textbf{and} path\_is\_safe}
+        \State $\mathbf{p}_{\text{target}} \gets \text{GetPointAlongPath}(\mathbf{P}_{\text{safe}}, \text{safe\_path\_index})$
+        \If{$\|\mathbf{p}_{\text{rov}}(t) - \mathbf{p}_{\text{target}}\| < \text{threshold}$}
+            \State safe\_path\_index $\gets$ safe\_path\_index + 1
+        \EndIf
+        \If{safe\_path\_index $\ge$ $|\mathbf{P}_{\text{safe}}|$}
+            \State finding\_safe\_path $\gets$ False
+            \State $\mathbf{p}_{\text{target}} \gets \mathbf{W}[k]$ \tcp*{Revert to original waypoint}
+        \EndIf
+    \Else
+        \State finding\_safe\_path $\gets$ False \tcp*{Ensure reset if path becomes invalid}
+        \State $\mathbf{p}_{\text{target}} \gets \mathbf{W}[k]$ \tcp*{Target original waypoint}
+        \If{$\|\mathbf{p}_{\text{rov}}(t) - \mathbf{p}_{\text{target}}\| < \text{threshold}$}
+             \State $k \gets k + 1$ \tcp*{Advance to next waypoint if reached}
+        \EndIf
+    \EndIf
+    \Return $\mathbf{p}_{\text{target}}$
+\end{algorithm}
+
+\begin{algorithm}[H]
+\caption{Search Alternative Recovery Path}
+\label{alg:search_alternative}
+\SetAlgoLined
+\SetKwInOut{Input}{Input}
+\SetKwInOut{Output}{Output}
+\Input{
+Current Tether $\mathbf{P}(t)$,
+Goal Waypoint $\mathbf{p}_{\text{goal}}$,
+Max Length $L_{\max}$
+}
+\Output{Recovery Path Segment $\mathbf{P}_{\text{recovery}}$}
+\BlankLine
+    \State best\_recovery\_path $\gets$ None
+    \State min\_len\_found $\gets \infty$
+    \State prev\_candidate\_len $\gets \infty$
+    \State found\_suitable $\gets$ False
+    \For{$i \gets |\mathbf{P}(t)| - 3$ \textbf{downto} 3}{
+        \State $\mathbf{P}_{\text{candidate}} \gets \text{GenerateCandidatePath}(i, \mathbf{P}(t), \mathbf{p}_{\text{goal}})$
+        \State $L_{\text{candidate}} \gets \text{ComputeCandidateLength}(i, \mathbf{P}(t), \mathbf{P}_{\text{candidate}})$
+        \If{$L_{\text{candidate}} < L_{\max} \times 0.7$ \textbf{and} $L_{\text{candidate}} < \text{prev\_candidate\_len} \times 0.65$}{
+             \State best\_recovery\_path $\gets \text{ExtractRecoverySegment}(i+2, \mathbf{P}(t))$
+             \State found\_suitable $\gets$ True
+             \textbf{break}
+        \EndIf
+        \State prev\_candidate\_len $\gets \text{ComputeCandidateLength}(i-3, \mathbf{P}(t), \text{GenerateCandidatePath}(i-3, \mathbf{P}(t), \mathbf{p}_{\text{goal}}))$ \tcp*{Store length for next comparison}
+    }
+    \If{\textbf{not} found\_suitable}{
+        \tcp{Fallback: path from ROV to goal}
+        \State $\mathbf{p}_{\text{rov}} \gets \mathbf{P}(t)[|\mathbf{P}(t)|-1]$
+        \State best\_recovery\_path $\gets \text{PlanShortestPath}(\mathbf{p}_{\text{rov}}, \mathbf{p}_{\text{goal}})$
+    \EndIf
+    \Return best\_recovery\_path
+\end{algorithm}
+
+\begin{algorithm}[H]
+\caption{Refine Recovery Path}
+\label{alg:refine_path}
+\SetAlgoLined
+\SetKwInOut{Input}{Input}
+\SetKwInOut{Output}{Output}
+\Input{
+Recovery Path $\mathbf{P}_{\text{recovery}}$,
+Offset distance $\delta_{\text{offset}}$,
+Sampling distance $\delta_{\text{sample}}$
+}
+\Output{Refined Safe Path $\mathbf{P}_{\text{safe}}$}
+\BlankLine
+    \State $\mathbf{P}_{\text{offset}} \gets \text{PopTetherCentroid}(\mathbf{P}_{\text{recovery}}, \delta_{\text{offset}})$
+    \State $\mathbf{P}_{\text{sampled}} \gets \text{PopPathSample}(\mathbf{P}_{\text{offset}}, \delta_{\text{sample}})$
+    \State $\mathbf{P}_{\text{safe}} \gets \text{SmoothPathWithPolynomial}(\mathbf{P}_{\text{sampled}})$
+    \Return $\mathbf{P}_{\text{safe}}$
+\end{algorithm}

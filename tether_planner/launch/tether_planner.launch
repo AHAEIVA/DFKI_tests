@@ -1,0 +1,11 @@
+<launch>
+    <!-- Launch the tether_planner node -->
+    <node name="tether_planner_node" pkg="tether_planner" type="tether_planner_node" output="screen">
+        <!-- Parameters for the node (if any) can be added here -->
+        <!-- <param name="parameter_name" value="value"/> -->
+    </node>
+    <rosparam file="$(find tether_planner)/config/simulation_params.yaml" command="load"/>
+    <rosparam file="$(find tether_planner)/config/tether_params.yaml" command="load"/>
+    <rosparam file="$(find tether_planner)/config/planner_params.yaml" command="load"/>
+
+</launch>
