@@ -1,9 +1,9 @@
 tether:
   delta: 0.2
   eq_tolerance: 0.00001
-  collision_threshold: -0.019 # more negative number means tether gets entangled more easily
+  collision_threshold: -0.015 # more negative number means tether gets entangled more easily
   #collision_threshold: -0.7 # more negative number means tether gets entangled more easily
-  L_max: 13.0
+  L_max: 8.0
   #nvblox_collision: 0.1
 
 initial_position:

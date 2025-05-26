@@ -562,10 +562,10 @@ ompl::geometric::PathGeometric TetherPlanner::SearchAlternativePath(
   ompl::geometric::PathGeometric Alternative_Path_1(si);
   bool short_cut = false;
  
-  for (int i = 3; i < tether.getStateCount()-2; i++) {
+  for (int i = 3; i < tether.getStateCount()-9; i++) {
     Alternative_Path = CalculateAlternativePath_i(i, tether, goal, si);
     Alternative_Path_1 = CalculateAlternativePath_i(i-3, tether, goal, si);
-    Alternative_Path_P1 = CalculateAlternativePath_iRRT(i+2, tether, goal, si);
+    Alternative_Path_P1 = CalculateAlternativePath_iRRT(i+8, tether, goal, si);
 
 
 

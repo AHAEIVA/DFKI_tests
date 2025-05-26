@@ -51,6 +51,11 @@ int main(int argc, char **argv) {
                0, 1, 0,
                0, 0, 1; // Rotation matrix to negate x, y, and z
 
+  Eigen::Matrix3f rotation_;
+  rotation_ <<  1, 0, 0,
+               0, -1, 0,
+               0, 0, -1; // Rotation matrix to negate x, y, and z
+
   Eigen::Matrix3f no_rotation;
   no_rotation <<  1, 0, 0,
                0, 1, 0,
@@ -69,6 +74,7 @@ int main(int argc, char **argv) {
   Eigen::Vector3f translation2(0.0, 0.0, 0.0); // Example translation
   //Eigen::Vector3f translation3(0.0, 0.0, -2.0); // Example translation
   Eigen::Vector3f translation3(0.0, 0.0, 3.0); // Example translation
+  Eigen::Vector3f translation_pc(-2.0, 0.0, 3.0); // Example translation
   Eigen::Vector3f translation_wp(-1.0, 0, 3.0); // Example translation
   Eigen::Vector3f no_translation(0.0, 0.0, 0.0); // Example translation
 
@@ -86,7 +92,7 @@ int main(int argc, char **argv) {
                              translation_wp, rotation2, way_point_traj);
                              
   transformSTLModel(inspection_model_stl, 1.0, translation2, rotation);
-  transformPointCloud(cloud , scale_factor *20 , translation, rotation);
+  transformPointCloud(cloud , scale_factor *20 , translation_pc, rotation);
 
   //transformWaypoints(way_point_traj, 1.5, 0 * translation, rotation);
 
@@ -364,7 +370,10 @@ int main(int argc, char **argv) {
     
    bool calculated_final_segment = simplifier.ropeRRTtether( PathIntermediate, contactPoints, delta,
     equivalenceTolerance);
-    //  calculated_final_segment = simplifier.ropeShortcutPath( PathIntermediate, delta,
+    
+   
+   
+   //  calculated_final_segment = simplifier.ropeShortcutPath( PathIntermediate, delta,
     //    equivalenceTolerance);
     //  Append the resulting path to PathIntermediate
      
@@ -373,12 +382,12 @@ int main(int argc, char **argv) {
      //  PathIntermediate = planner.PopPathWaypoint(
      //   PathIntermediate, way_point_traj, si_t, safe_distance * 1.0);
       //PathIntermediate = planner.PopPath(PathIntermediate, esdf_layer, safe_distance * 0.5);
-     planner.PopTetherCentroid(PathIntermediate, si, delta * 1.5);
+     planner.PopTetherCentroid(PathIntermediate, si, delta );
 
 
-       planner.PopPathSample(PathIntermediate, si, delta);
+       //planner.PopPathSample(PathIntermediate, si, delta);
       // PathIntermediate = planner.smoothPathWith5thOrderPolynomial(PathIntermediate, si);
-       PathIntermediate = planner.smoothPathWithPolynomial(PathIntermediate, si);
+   //    PathIntermediate = planner.smoothPathWithPolynomial(PathIntermediate, si);
        PathSafe =  PathIntermediate ;      
        i_safe_path = 0;
      //} 
