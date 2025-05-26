@@ -119,7 +119,7 @@ std::unique_ptr<nvblox::Mapper> mapFromPipe(double scale_factor, Eigen::Matrix3f
 
     // Add primitives to the scene
     for (const auto& point : points) {
-        scene.addPrimitive(std::make_unique<nvblox::primitives::Sphere>(point, 0.5f));  // Larger spheres for more coverage
+        scene.addPrimitive(std::make_unique<nvblox::primitives::Sphere>(point, voxel_size_m * 10.0));  // Larger spheres for more coverage
     }
 
     // Generate TSDF layer with a smaller truncation distance to save memory
@@ -133,13 +133,6 @@ std::unique_ptr<nvblox::Mapper> mapFromPipe(double scale_factor, Eigen::Matrix3f
     // Compute ESDF and Mesh
     mapper->updateEsdf(nvblox::UpdateFullLayer::kYes);
     mapper->mesh_integrator().integrateMeshFromDistanceField(
-        mapper->tsdf_layer(), &mapper->mesh_layer()
-    );
-
-    // Save the generated map with a new minimal cache path
-    mapper->saveLayerCake(pathCache);
-
-    // Return the created mapper object
     return mapper;
 }
 

@@ -1,7 +1,7 @@
 import numpy as np
 import math
 
-def generate_pipe_point_cloud(pipe_density=0.02, plate_density=1.0):
+def generate_pipe_point_cloud(pipe_density=1.0, plate_density=1.0):
     """
     Generate a dense point cloud for a 3D pipe with support plates
     
@@ -169,7 +169,7 @@ def main():
     # Density control parameters
     # Adjust these values to control point cloud density:
     # 1.0 = default density, 2.0 = double density, 0.5 = half density
-    PIPE_DENSITY = 0.3     # Controls pipe point density
+    PIPE_DENSITY = 0.4     # Controls pipe point density
     PLATE_DENSITY = 1.0     # Controls support plate point density
     
     print(f"Density settings:")

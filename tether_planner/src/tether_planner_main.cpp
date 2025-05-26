@@ -69,7 +69,7 @@ int main(int argc, char **argv) {
   Eigen::Vector3f translation2(0.0, 0.0, 0.0); // Example translation
   //Eigen::Vector3f translation3(0.0, 0.0, -2.0); // Example translation
   Eigen::Vector3f translation3(0.0, 0.0, 3.0); // Example translation
-  Eigen::Vector3f translation_wp(1.0, 0.5, 3.0); // Example translation
+  Eigen::Vector3f translation_wp(-1.0, 0, 3.0); // Example translation
   Eigen::Vector3f no_translation(0.0, 0.0, 0.0); // Example translation
 
   // Transform the point cloud
@@ -116,7 +116,7 @@ int main(int argc, char **argv) {
   rotation <<  1, 0, 0,
                0, -1, 0,
                0, 0, -1; // Rotation matrix to negate x, y, and z
-  std::unique_ptr<nvblox::Mapper> pipe_map = mapFromPipe(1.0, -1 * rotation2, translation3 );
+  std::unique_ptr<nvblox::Mapper> pipe_map = mapFromPipe(1.0, rotation, translation3 );
   const nvblox::EsdfLayer& esdf_layer = pipe_map->esdf_layer();
   loadNvbloxModel(nvblx_file_path);
 
