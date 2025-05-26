@@ -1,0 +1,60 @@
+-- The CXX compiler identification is GNU 9.4.0
+-- The CUDA compiler identification is NVIDIA 12.4.99
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Detecting CUDA compiler ABI info
+-- Detecting CUDA compiler ABI info - done
+-- Check for working CUDA compiler: /usr/local/cuda-12.4/bin/nvcc - skipped
+-- Detecting CUDA compile features
+-- Detecting CUDA compile features - done
+-- Using CATKIN_DEVEL_PREFIX: /home/hakim/tether_planning_ws/src/tether_planner/build/tether_planner/devel
+-- Using CMAKE_PREFIX_PATH: /home/hakim/tether_planning_ws/devel;/opt/ros/noetic
+-- This workspace overlays: /home/hakim/tether_planning_ws/devel;/opt/ros/noetic
+-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python3
+-- Using Debian Python package layout
+-- Found PY_em: /usr/lib/python3/dist-packages/em.py  
+-- Using empy: /usr/lib/python3/dist-packages/em.py
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/hakim/tether_planning_ws/src/tether_planner/build/tether_planner/test_results
+-- Forcing gtest/gmock from source, though one was otherwise available.
+-- Found gtest sources under '/usr/src/googletest': gtests will be built
+-- Found gmock sources under '/usr/src/googletest': gmock will be built
+-- The C compiler identification is GNU 9.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") 
+-- Found Threads: TRUE  
+-- Using Python nosetests: /usr/bin/nosetests3
+-- catkin 0.8.10
+-- BUILD_SHARED_LIBS is on
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+-- Found CUDAToolkit: /usr/local/cuda-12.4/include (found version "12.4.99") 
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/hakim/tether_planning_ws/src/tether_planner/build/tether_planner
+[ 11%] [32mBuilding CXX object CMakeFiles/tether_planner_node.dir/src/tether_planner_main.cpp.o[0m
+[ 22%] [32mBuilding CXX object CMakeFiles/tether_planner_node.dir/src/publishers.cpp.o[0m
+[ 33%] [32mBuilding CXX object CMakeFiles/tether_planner_node.dir/src/helper_functions.cpp.o[0m
+[ 44%] [32mBuilding CXX object CMakeFiles/tether_planner_node.dir/src/global_vars.cpp.o[0m
+[ 55%] [32mBuilding CXX object CMakeFiles/tether_planner_node.dir/src/my_motion_validator.cpp.o[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/tether_planner_node.dir/src/tether_planner.cpp.o[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/tether_planner_node.dir/src/collision_checker.cpp.o[0m
+[ 88%] [32mBuilding CXX object CMakeFiles/tether_planner_node.dir/src/nvblox_functions.cpp.o[0m
+[100%] [32m[1mLinking CXX executable devel/lib/tether_planner/tether_planner_node[0m
+[100%] Built target tether_planner_node
+Built target tests
+-- Install configuration: ""
+-- Installing: /home/hakim/tether_planning_ws/src/tether_planner/install/tether_planner/lib/pkgconfig/tether_planner.pc
+-- Installing: /home/hakim/tether_planning_ws/src/tether_planner/install/tether_planner/share/tether_planner/cmake/tether_plannerConfig.cmake
+-- Installing: /home/hakim/tether_planning_ws/src/tether_planner/install/tether_planner/share/tether_planner/cmake/tether_plannerConfig-version.cmake
+-- Installing: /home/hakim/tether_planning_ws/src/tether_planner/install/tether_planner/share/tether_planner/package.xml
+-- Installing: /home/hakim/tether_planning_ws/src/tether_planner/install/tether_planner/lib/tether_planner/tether_planner_node
+-- Set runtime path of "/home/hakim/tether_planning_ws/src/tether_planner/install/tether_planner/lib/tether_planner/tether_planner_node" to ""

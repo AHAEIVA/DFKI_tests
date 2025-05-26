@@ -1,5 +1,4 @@
 planner:
   safe_offset: 0.2
   ta_planner_on: false
-
- 
+  coverage_planner_mode: "default" # Options: "default", "helical"

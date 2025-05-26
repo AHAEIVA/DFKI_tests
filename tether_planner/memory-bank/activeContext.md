@@ -2,10 +2,20 @@
 
 ## Current Focus
 
-*   (As of 2025-04-07): Finalize comparison results and documentation for `run3` data (`CPP` vs `OEA-PP`).
+*   (As of 2025-05-26): Implemented `coverage_planner_mode` parameter to dynamically select input trajectory files.
 
 ## Recent Changes
 
+*   (2025-05-26):
+    *   Added `coverage_planner_mode` parameter to `tether_planner/config/planner_params.yaml`. This parameter controls which text file is read for the planner's helper functions.
+    *   Modified `tether_planner/src/helper_functions.cpp` to read the `coverage_planner_mode` parameter.
+    *   Implemented conditional logic in `initializeGlobalVariables` within `helper_functions.cpp` to set `txtfilePath` to `dfki_pipe_helix.txt` if `coverage_planner_mode` is "helical", otherwise it defaults to `dfki_pipe_fc.txt`.
+*   (2025-04-07):
+    *   Attempted to run `fc_planner` simulation and record bag for `run4`, but data extraction failed.
+    *   Ran `simulate_trajectory.py` for `results/run3/fc_planner/` to ensure `coverage_data.csv` was up-to-date.
+    *   Modified `compare_planner_runs.py` to increase plot text sizes (labels, legends, ticks) and line thickness, and remove plot titles.
+    *   Re-ran comparison using `run3` data with planner names `CPP` (for `fc_planner`) and `OEA-PP` (for `ta_planner_good`), saving results to `results/comparison/`.
+    *   Updated the results table in `results/comparison/comparison_analysis.md` with the latest `CPP` vs `OEA-PP` data.
 *   (2025-04-06):
     *   Extracted `/rope_path`, `/mobula/rov/odometry`, `/mobula/rov/orientation` topics from `ta_planner_good.bag` and `fc_planner.bag` into `.txt` files in `results/run3/`.
     *   Refactored `process_run2_txt_to_csv.py` into `process_ros_txt_to_csv.py` to accept command-line arguments.
@@ -23,17 +33,11 @@
     *   Modified `compare_planner_runs.py` to save plots as PDF instead of PNG.
     *   Re-ran comparison using specific names: "Online Entaglement-Aware PP" (for `ta_planner_good`) and "CPP (without entaglement awareness)" (for `fc_planner`). Updated PDF plots and metrics table saved in `results/comparison/`.
     *   Created `results/comparison/comparison_analysis.md` summarizing the comparison results and discussion in a scientific format.
-*   (2025-04-07):
-    *   Attempted to run `fc_planner` simulation and record bag for `run4`, but data extraction failed.
-    *   Ran `simulate_trajectory.py` for `results/run3/fc_planner/` to ensure `coverage_data.csv` was up-to-date.
-    *   Modified `compare_planner_runs.py` to increase plot text sizes (labels, legends, ticks) and line thickness, and remove plot titles.
-    *   Re-ran comparison using `run3` data with planner names `CPP` (for `fc_planner`) and `OEA-PP` (for `ta_planner_good`), saving results to `results/comparison/`.
-    *   Updated the results table in `results/comparison/comparison_analysis.md` with the latest `CPP` vs `OEA-PP` data.
 
 ## Next Steps
 
-*   Update `progress.md` to reflect the completion of the comparison task and the updates to the analysis document.
-*   Await further instructions from the user.
+*   Update `progress.md` to reflect the completion of the `coverage_planner_mode` implementation.
+*   Verify the functionality of the new parameter by running the planner with different `coverage_planner_mode` settings.
 
 ## Active Decisions & Considerations
 

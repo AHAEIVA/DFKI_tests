@@ -1,4 +1,7 @@
 #include "nvblox_functions.hpp"
+#include <fstream>
+#include <iostream>
+#include <yaml-cpp/yaml.h>
 
 using namespace std::chrono_literals;
 
@@ -69,6 +72,13 @@ std::unique_ptr<nvblox::Mapper> mapFromPipe(double scale_factor, Eigen::Matrix3f
     std::string path = "/home/hakim/tether_planning_ws/src/tether_planner/input_data/dfki_pipe.xyz";
     std::string pathCache = "/home/hakim/tether_planning_ws/src/tether_planner/input_data/dfki_pipe.nvblx";  // New cache path
 
+    // Load parameters from YAML file
+    std::string config_path = "/home/hakim/tether_planning_ws/src/tether_planner/config/nvblox.yaml";
+    YAML::Node config = YAML::LoadFile(config_path);
+
+    double voxel_size_m = config["voxel_size_m"].as<double>();
+    float max_esdf_distance_m = config["max_esdf_distance_m"].as<float>();
+
     // Check if the cache exists
     if (std::filesystem::exists(pathCache)) {
         return mapFromCake(pathCache);  // Load map from cache if available
@@ -84,9 +94,6 @@ std::unique_ptr<nvblox::Mapper> mapFromPipe(double scale_factor, Eigen::Matrix3f
     for (auto& point : points) {
         point = scale_factor * (rotation * point + translation);
     }
-
-    // Further increase voxel size to reduce map size even more
-    double voxel_size_m = 0.08;  // Larger voxel size to drastically reduce the map size
 
     // Create a Mapper object with reduced memory usage
     std::unique_ptr<nvblox::Mapper> mapper = std::make_unique<nvblox::Mapper>(voxel_size_m, nvblox::MemoryType::kDevice);
@@ -121,7 +128,7 @@ std::unique_ptr<nvblox::Mapper> mapFromPipe(double scale_factor, Eigen::Matrix3f
     mapper->tsdf_layer() = std::move(gt_tsdf);
 
     // Compute ESDF and Mesh with a reduced range
-    mapper->esdf_integrator().max_esdf_distance_m(0.1f);  // Use a smaller ESDF distance to reduce memory usage
+    mapper->esdf_integrator().max_esdf_distance_m(max_esdf_distance_m);  // Use a smaller ESDF distance to reduce memory usage
 
     // Compute ESDF and Mesh
     mapper->updateEsdf(nvblox::UpdateFullLayer::kYes);

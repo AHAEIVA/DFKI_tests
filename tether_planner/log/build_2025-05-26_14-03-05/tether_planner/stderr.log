@@ -1,0 +1,164 @@
+[0mCMake Deprecation Warning at /usr/src/googletest/CMakeLists.txt:4 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+[0mCMake Deprecation Warning at /usr/src/googletest/googlemock/CMakeLists.txt:45 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+[0mCMake Deprecation Warning at /usr/src/googletest/googletest/CMakeLists.txt:56 (cmake_minimum_required):
+  Compatibility with CMake < 2.8.12 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value or use a ...<max> suffix to tell
+  CMake that the project does not need compatibility with older versions.
+
+[0m
+[33mCMake Warning at /opt/ros/noetic/share/catkin/cmake/catkin_package.cmake:166 (message):
+  catkin_package() DEPENDS on 'EIGEN3' but neither 'EIGEN3_INCLUDE_DIRS' nor
+  'EIGEN3_LIBRARIES' is defined.
+Call Stack (most recent call first):
+  /opt/ros/noetic/share/catkin/cmake/catkin_package.cmake:102 (_catkin_package)
+  CMakeLists.txt:15 (catkin_package)
+
+[0m
+[33mCMake Warning at /opt/ros/noetic/share/catkin/cmake/catkin_package.cmake:166 (message):
+  catkin_package() DEPENDS on 'CUDA' but neither 'CUDA_INCLUDE_DIRS' nor
+  'CUDA_LIBRARIES' is defined.
+Call Stack (most recent call first):
+  /opt/ros/noetic/share/catkin/cmake/catkin_package.cmake:102 (_catkin_package)
+  CMakeLists.txt:15 (catkin_package)
+
+[0m
+[33mCMake Warning at /opt/ros/noetic/share/catkin/cmake/catkin_package.cmake:166 (message):
+  catkin_package() DEPENDS on 'OMPL' but neither 'OMPL_INCLUDE_DIRS' nor
+  'OMPL_LIBRARIES' is defined.
+Call Stack (most recent call first):
+  /opt/ros/noetic/share/catkin/cmake/catkin_package.cmake:102 (_catkin_package)
+  CMakeLists.txt:15 (catkin_package)
+
+[0m
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/publishers.cpp:[m[K In function ‘[01m[Kvoid publishBlueRovMarker(ros::Publisher&, const std::vector<double>&, const std::vector<double>&, const string&)[m[K’:
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/publishers.cpp:7:32:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kcurrent_att_quat[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+    7 |     [01;35m[Kconst std::vector<double>& current_att_quat[m[K,
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/helper_functions.cpp:[m[K In function ‘[01m[Kbool isPointInsideCylinder(const Vector3f&, const cylinder_obs&)[m[K’:
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/helper_functions.cpp:279:19:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[KclosestPointOnAxis[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+  279 |   Eigen::Vector3f [01;35m[KclosestPointOnAxis[m[K =
+      |                   [01;35m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:[m[K In member function ‘[01m[Kompl::geometric::PathGeometric TetherPlanner::findNextGoal(const ompl::geometric::PathGeometric&, const std::vector<double>&, const std::vector<double>&, double&, const std::shared_ptr<ompl::base::RealVectorStateSpace>&, const std::shared_ptr<ompl::base::SpaceInformation>&)[m[K’:
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:89:25:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::vector<double> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+   89 |       for (int i = 0; [01;35m[Ki < exit_points_list_.size()[m[K; i++) {
+      |                       [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:[m[K In member function ‘[01m[Kstd::vector<double> TetherPlanner::FindNextPointAlongPath(const std::vector<double>&, const std::vector<double>&, const ompl::geometric::PathGeometric&)[m[K’:
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:296:32:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kcurrent_position[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  296 |     [01;35m[Kconst std::vector<double> &current_position[m[K,
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:[m[K In member function ‘[01m[Kompl::geometric::PathGeometric TetherPlanner::CalculateAlternativePath_i(int, ompl::geometric::PathGeometric, std::vector<double>, const std::shared_ptr<ompl::base::SpaceInformation>&)[m[K’:
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:445:17:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kstate[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  445 |     const auto *[01;35m[Kstate[m[K = Alternative_Path.getState(i)
+      |                 [01;35m[K^~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:[m[K In member function ‘[01m[Kompl::geometric::PathGeometric TetherPlanner::CalculateAlternativePath_iRRT(int, ompl::geometric::PathGeometric, std::vector<double>, const std::shared_ptr<ompl::base::SpaceInformation>&)[m[K’:
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:520:15:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kstate[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  520 |   const auto *[01;35m[Kstate[m[K = Alternative_Path.getState(i)
+      |               [01;35m[K^~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:[m[K In member function ‘[01m[Kompl::geometric::PathGeometric TetherPlanner::SearchAlternativePath(ompl::geometric::PathGeometric, std::vector<double>, const std::shared_ptr<ompl::base::SpaceInformation>&, double)[m[K’:
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:565:21:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::size_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  565 |   for (int i = 3; [01;35m[Ki < tether.getStateCount()-2[m[K; i++) {
+      |                   [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/helper_functions.cpp:[m[K In function ‘[01m[Kvoid densifyPointCloud(pcl::PointCloud<pcl::PointXYZ>::Ptr&)[m[K’:
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/helper_functions.cpp:486:28:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvoid pcl::MovingLeastSquares<PointInT, PointOutT>::setPolynomialFit(bool) [with PointInT = pcl::PointXYZ; PointOutT = pcl::PointXYZ][m[K’ is deprecated: use setPolynomialOrder() instead [[01;35m[K-Wdeprecated-declarations[m[K]
+  486 |   mls.setPolynomialFit(true[01;35m[K)[m[K;
+      |                            [01;35m[K^[m[K
+In file included from [01m[K/home/hakim/tether_planning_ws/src/tether_planner/include/global_vars.hpp:21[m[K,
+                 from [01m[K/home/hakim/tether_planning_ws/src/tether_planner/include/publishers.hpp:23[m[K,
+                 from [01m[K/home/hakim/tether_planning_ws/src/tether_planner/include/helper_functions.hpp:3[m[K,
+                 from [01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/helper_functions.cpp:1[m[K:
+[01m[K/usr/include/pcl-1.10/pcl/surface/mls.h:361:7:[m[K [01;36m[Knote: [m[Kdeclared here
+  361 |       [01;36m[KsetPolynomialFit[m[K (bool polynomial_fit)
+      |       [01;36m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:[m[K In member function ‘[01m[Kstd::vector<double> TetherPlanner::GetNextPointAlongPath(const ompl::geometric::PathGeometric&, std::vector<double>, std::vector<double>, const std::shared_ptr<ompl::base::SpaceInformation>&)[m[K’:
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:770:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdelta_safe[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  770 |   double [01;35m[Kdelta_safe[m[K = 1.0;
+      |          [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:762:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kcurrent_position[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+  762 |     [01;35m[Kconst std::vector<double> current_position[m[K, const std::vector<double> goal,
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/helper_functions.cpp:[m[K In function ‘[01m[Kvoid removeWaypoint(std::vector<std::vector<double> >&, int)[m[K’:
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/helper_functions.cpp:872:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::vector<double> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  872 |   if (index >= 0 && [01;35m[Kindex < way_point_traj.size()[m[K) {
+      |                     [01;35m[K~~~~~~^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/helper_functions.cpp:[m[K In function ‘[01m[Kvoid initializePointCloud(pcl::PointCloud<pcl::PointXYZ>::Ptr&)[m[K’:
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/helper_functions.cpp:882:11:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kscale_factor[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  882 |     float [01;35m[Kscale_factor[m[K = 1.0;
+      |           [01;35m[K^~~~~~~~~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/helper_functions.cpp:[m[K In function ‘[01m[Kvoid initializeROS(int, char**, ros::NodeHandle&)[m[K’:
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/helper_functions.cpp:1027:60:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Knh[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ 1027 | void initializeROS(int argc, char **argv, [01;35m[Kros::NodeHandle &nh[m[K)
+      |                                           [01;35m[K~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/helper_functions.cpp:[m[K In function ‘[01m[Kvoid initializeGlobalVariables()[m[K’:
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/helper_functions.cpp:1088:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KdistanceThreshold[m[K’ [[01;35m[K-Wunused-variable[m[K]
+ 1088 |     double [01;35m[KdistanceThreshold[m[K = 10;
+      |            [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:[m[K In member function ‘[01m[Kstd::vector<double> TetherPlanner::getPointAlongPath(const ompl::geometric::PathGeometric&, int)[m[K’:
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:1189:17:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::size_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+ 1189 | if (i >= 0 && [01;35m[Ki < path.getStateCount()[m[K) {
+      |               [01;35m[K~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:[m[K In function ‘[01m[Kint main(int, char**)[m[K’:
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:246:28:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::vector<double> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  246 |     if (count > 0 && [01;35m[Kcount < way_point_traj.size()[m[K) {
+      |                      [01;35m[K~~~~~~^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:256:15:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<std::vector<double> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  256 |         [01;35m[Kcount < way_point_traj.size() - 1[m[K && finding_safe_path == false) {
+      |         [01;35m[K~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:344:53:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::size_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  344 |     if (PathSafe.getStateCount() > 2 && [01;35m[Ki_safe_path == PathSafe.getStateCount()-2[m[K) {
+      |                                         [01;35m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:365:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcalculated_final_segment[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  365 |    bool [01;35m[Kcalculated_final_segment[m[K = simplifier.ropeRRTtether( PathIntermediate, contactPoints, delta,
+      |         [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:426:22:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::size_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  426 |      if ([01;35m[Ki_safe_path >= PathSafe.getStateCount()[m[K ||
+      |          [01;35m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:445:19:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kstate[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  445 |       const auto *[01;35m[Kstate[m[K =
+      |                   [01;35m[K^~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:453:21:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kstate[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  453 |         const auto *[01;35m[Kstate[m[K =
+      |                     [01;35m[K^~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:231:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktether_computed[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  231 |     bool [01;35m[Ktether_computed[m[K = simplifier.ropeRRTtether(P_t, contactPoints, delta,
+      |          [01;35m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:234:8:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kpath_computed[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  234 |   bool [01;35m[Kpath_computed[m[K = simplifier_path.ropeRRTtether(P_t_path, contactPoints, delta,
+      |        [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:266:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KTether_length[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  266 |     double [01;35m[KTether_length[m[K = planner.findTetherLength(P_t);
+      |            [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:305:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ksafe_distance[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  305 |     double [01;35m[Ksafe_distance[m[K = 1.0;
+      |            [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:24:13:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Klast_time[m[K’ set but not used [[01;35m[K-Wunused-but-set-variable[m[K]
+   24 |   ros::Time [01;35m[Klast_time[m[K =
+      |             [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:104:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kleaf_size[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  104 |   float [01;35m[Kleaf_size[m[K = 0.02f; // Adjust the leaf size as needed
+      |         [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:120:28:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kesdf_layer[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  120 |   const nvblox::EsdfLayer& [01;35m[Kesdf_layer[m[K = pipe_map->esdf_layer();
+      |                            [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:166:8:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kfirst_compute[m[K’ [[01;35m[K-Wunused-variable[m[K]
+  166 |   bool [01;35m[Kfirst_compute[m[K = true;
+      |        [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:[m[K In member function ‘[01m[Kvoid TetherPlanner::PopTetherCentroid(ompl::geometric::PathGeometric&, const std::shared_ptr<ompl::base::SpaceInformation>&, double)[m[K’:
+[01m[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:1630:130:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ksi[m[K’ [[01;35m[K-Wunused-parameter[m[K]
+ 1630 | void TetherPlanner::PopTetherCentroid(ompl::geometric::PathGeometric &path, [01;35m[Kconst std::shared_ptr<ompl::base::SpaceInformation> &si[m[K, double delta) {
+      |                                                                             [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K

@@ -1,0 +1,1151 @@
+[0.000000] (-) TimerEvent: {}
+[0.001874] (tether_planner) JobQueued: {'identifier': 'tether_planner', 'dependencies': OrderedDict()}
+[0.002100] (tether_planner) JobStarted: {'identifier': 'tether_planner'}
+[0.012930] (tether_planner) JobProgress: {'identifier': 'tether_planner', 'progress': 'cmake'}
+[0.014604] (tether_planner) Command: {'cmd': ['/opt/cmake-3.22.1/bin/cmake', '/home/hakim/tether_planning_ws/src/tether_planner', '-DCATKIN_INSTALL_INTO_PREFIX_ROOT=0', '-DCMAKE_INSTALL_PREFIX=/home/hakim/tether_planning_ws/src/tether_planner/install/tether_planner'], 'cwd': '/home/hakim/tether_planning_ws/src/tether_planner/build/tether_planner', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hakim'), ('ROS_PACKAGE_PATH', '/home/hakim/tether_planning_ws/src/bluerov2_nmpc:/home/hakim/tether_planning_ws/src/bluerov2_trajectory:/home/hakim/tether_planning_ws/src/ea_mpc:/home/hakim/tether_planning_ws/src/motion_capture_system/mocap_base:/home/hakim/tether_planning_ws/src/motion_capture_system/mocap_qualisys:/home/hakim/tether_planning_ws/src/motion_capture_system/mocap_vicon:/home/hakim/tether_planning_ws/src/tether_planner:/opt/ros/noetic/share'), ('GIT_ASKPASS', '/home/hakim/.vscode-server/bin/91fa95bccb027ece6a968589bb1d662fa9c8e170/extensions/git/dist/askpass.sh'), ('ROS_ETC_DIR', '/opt/ros/noetic/etc/ros'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/home/hakim/tether_planning_ws/devel/lib:/opt/ros/noetic/lib:/usr/local/cuda-12.4/lib64:/usr/local/cuda-12.4/lib64:/usr/local/cuda-12.4/lib64'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/hakim'), ('OLDPWD', '/home/hakim/tether_planning_ws/src'), ('TERM_PROGRAM_VERSION', '1.100.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-89e5c150-06f8-4d21-9036-8fee3412e751.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/hakim/.vscode-server/bin/91fa95bccb027ece6a968589bb1d662fa9c8e170/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/hakim/.vscode-server/bin/91fa95bccb027ece6a968589bb1d662fa9c8e170/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/hakim/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-x64/bundled/libs/debugpy'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('WSL_DISTRO_NAME', 'Ubuntu-20.04'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'noetic'), ('LOGNAME', 'hakim'), ('NAME', 'Code'), ('WSL_INTEROP', '/run/WSL/1288_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '1'), ('PKG_CONFIG_PATH', '/home/hakim/tether_planning_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig'), ('TERM', 'xterm-256color'), ('PATH', '/opt/ros/noetic/bin:/usr/local/cuda-12.4/bin:/opt/cmake-3.22.1/bin:/home/hakim/.vscode-server/bin/91fa95bccb027ece6a968589bb1d662fa9c8e170/bin/remote-cli:/usr/local/cuda-12.4/bin:/opt/cmake-3.22.1/bin:/home/hakim/.local/bin:/usr/local/cuda-12.4/bin:/opt/cmake-3.22.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/TortoiseSVN/bin:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/aha/AppData/Local/Programs/Python/Python313:/mnt/c/Users/aha/AppData/Local/anaconda3/Scripts:/mnt/c/Users/aha/AppData/Local/anaconda3/:/mnt/c/Users/aha/AppData/Local/anaconda3/Library/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/socat-1.7.3.0:/mnt/c/Users/aha/AppData/Local/Programs/Python/Python313/Scripts/:/mnt/c/Users/aha/AppData/Local/Programs/Python/Python313/:/mnt/c/Users/aha/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/aha/AppData/Local/Microsoft/WindowsApps:/mnt/c/texlive/2024/bin/windows:/mnt/c/cygwin/bin:/snap/bin:/home/hakim/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-x64/bundled/scripts/noConfigScripts:/home/hakim/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/hakim/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-f87ade50c07665ae.txt'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('ROSLISP_PACKAGE_DIRECTORIES', '/home/hakim/tether_planning_ws/devel/share/common-lisp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-7949cb36df.sock'), ('ROS_ROOT', '/opt/ros/noetic/share/ros'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '0'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:2f03f8ea-6aa0-4021-a692-c9555e514c6d'), ('ROS_MASTER_URI', 'http://localhost:11311'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/hakim/tether_planning_ws/src/tether_planner/build/tether_planner'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/hakim/tether_planning_ws/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('VTE_VERSION', '6003'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/hakim/tether_planning_ws/devel:/opt/ros/noetic'), ('WSLENV', 'ELECTRON_RUN_AS_NODE/w:')]), 'shell': False}
+[0.099825] (-) TimerEvent: {}
+[0.172186] (tether_planner) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.199913] (-) TimerEvent: {}
+[0.300273] (-) TimerEvent: {}
+[0.400654] (-) TimerEvent: {}
+[0.501009] (-) TimerEvent: {}
+[0.601387] (-) TimerEvent: {}
+[0.701845] (-) TimerEvent: {}
+[0.802285] (-) TimerEvent: {}
+[0.902894] (-) TimerEvent: {}
+[1.003269] (-) TimerEvent: {}
+[1.060695] (tether_planner) StdoutLine: {'line': b'-- The CUDA compiler identification is NVIDIA 12.4.99\n'}
+[1.103423] (-) TimerEvent: {}
+[1.118359] (tether_planner) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.203575] (-) TimerEvent: {}
+[1.220035] (tether_planner) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[1.226374] (tether_planner) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[1.227265] (tether_planner) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[1.228100] (tether_planner) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[1.233545] (tether_planner) StdoutLine: {'line': b'-- Detecting CUDA compiler ABI info\n'}
+[1.303798] (-) TimerEvent: {}
+[1.404281] (-) TimerEvent: {}
+[1.504651] (-) TimerEvent: {}
+[1.605048] (-) TimerEvent: {}
+[1.705454] (-) TimerEvent: {}
+[1.713636] (tether_planner) StdoutLine: {'line': b'-- Detecting CUDA compiler ABI info - done\n'}
+[1.742817] (tether_planner) StdoutLine: {'line': b'-- Check for working CUDA compiler: /usr/local/cuda-12.4/bin/nvcc - skipped\n'}
+[1.743160] (tether_planner) StdoutLine: {'line': b'-- Detecting CUDA compile features\n'}
+[1.743357] (tether_planner) StdoutLine: {'line': b'-- Detecting CUDA compile features - done\n'}
+[1.749538] (tether_planner) StdoutLine: {'line': b'-- Using CATKIN_DEVEL_PREFIX: /home/hakim/tether_planning_ws/src/tether_planner/build/tether_planner/devel\n'}
+[1.750103] (tether_planner) StdoutLine: {'line': b'-- Using CMAKE_PREFIX_PATH: /home/hakim/tether_planning_ws/devel;/opt/ros/noetic\n'}
+[1.750186] (tether_planner) StdoutLine: {'line': b'-- This workspace overlays: /home/hakim/tether_planning_ws/devel;/opt/ros/noetic\n'}
+[1.780738] (tether_planner) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[1.780948] (tether_planner) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.780998] (tether_planner) StdoutLine: {'line': b'-- Using Debian Python package layout\n'}
+[1.805575] (-) TimerEvent: {}
+[1.860809] (tether_planner) StdoutLine: {'line': b'-- Found PY_em: /usr/lib/python3/dist-packages/em.py  \n'}
+[1.861018] (tether_planner) StdoutLine: {'line': b'-- Using empy: /usr/lib/python3/dist-packages/em.py\n'}
+[1.905723] (-) TimerEvent: {}
+[1.962623] (tether_planner) StdoutLine: {'line': b'-- Using CATKIN_ENABLE_TESTING: ON\n'}
+[1.962900] (tether_planner) StdoutLine: {'line': b'-- Call enable_testing()\n'}
+[1.965074] (tether_planner) StdoutLine: {'line': b'-- Using CATKIN_TEST_RESULTS_DIR: /home/hakim/tether_planning_ws/src/tether_planner/build/tether_planner/test_results\n'}
+[2.005854] (-) TimerEvent: {}
+[2.106239] (-) TimerEvent: {}
+[2.206619] (-) TimerEvent: {}
+[2.306979] (-) TimerEvent: {}
+[2.407337] (-) TimerEvent: {}
+[2.507686] (-) TimerEvent: {}
+[2.608068] (-) TimerEvent: {}
+[2.708438] (-) TimerEvent: {}
+[2.808817] (-) TimerEvent: {}
+[2.909230] (-) TimerEvent: {}
+[3.009581] (-) TimerEvent: {}
+[3.109946] (-) TimerEvent: {}
+[3.210314] (-) TimerEvent: {}
+[3.310673] (-) TimerEvent: {}
+[3.321416] (tether_planner) StdoutLine: {'line': b'-- Forcing gtest/gmock from source, though one was otherwise available.\n'}
+[3.321679] (tether_planner) StdoutLine: {'line': b"-- Found gtest sources under '/usr/src/googletest': gtests will be built\n"}
+[3.321726] (tether_planner) StdoutLine: {'line': b"-- Found gmock sources under '/usr/src/googletest': gmock will be built\n"}
+[3.323033] (tether_planner) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at /usr/src/googletest/CMakeLists.txt:4 (cmake_minimum_required):\n'}
+[3.323180] (tether_planner) StderrLine: {'line': b'  Compatibility with CMake < 2.8.12 will be removed from a future version of\n'}
+[3.323218] (tether_planner) StderrLine: {'line': b'  CMake.\n'}
+[3.323253] (tether_planner) StderrLine: {'line': b'\n'}
+[3.323287] (tether_planner) StderrLine: {'line': b'  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n'}
+[3.323333] (tether_planner) StderrLine: {'line': b'  CMake that the project does not need compatibility with older versions.\n'}
+[3.323367] (tether_planner) StderrLine: {'line': b'\n'}
+[3.323400] (tether_planner) StderrLine: {'line': b'\x1b[0m\n'}
+[3.410796] (-) TimerEvent: {}
+[3.463603] (tether_planner) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[3.510922] (-) TimerEvent: {}
+[3.611279] (-) TimerEvent: {}
+[3.674338] (tether_planner) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[3.711416] (-) TimerEvent: {}
+[3.761409] (tether_planner) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[3.768588] (tether_planner) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[3.769836] (tether_planner) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[3.769962] (tether_planner) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[3.774948] (tether_planner) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at /usr/src/googletest/googlemock/CMakeLists.txt:45 (cmake_minimum_required):\n'}
+[3.775031] (tether_planner) StderrLine: {'line': b'  Compatibility with CMake < 2.8.12 will be removed from a future version of\n'}
+[3.775088] (tether_planner) StderrLine: {'line': b'  CMake.\n'}
+[3.775124] (tether_planner) StderrLine: {'line': b'\n'}
+[3.775158] (tether_planner) StderrLine: {'line': b'  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n'}
+[3.775196] (tether_planner) StderrLine: {'line': b'  CMake that the project does not need compatibility with older versions.\n'}
+[3.775244] (tether_planner) StderrLine: {'line': b'\n'}
+[3.775277] (tether_planner) StderrLine: {'line': b'\x1b[0m\n'}
+[3.776018] (tether_planner) StderrLine: {'line': b'\x1b[0mCMake Deprecation Warning at /usr/src/googletest/googletest/CMakeLists.txt:56 (cmake_minimum_required):\n'}
+[3.776093] (tether_planner) StderrLine: {'line': b'  Compatibility with CMake < 2.8.12 will be removed from a future version of\n'}
+[3.776132] (tether_planner) StderrLine: {'line': b'  CMake.\n'}
+[3.776166] (tether_planner) StderrLine: {'line': b'\n'}
+[3.776200] (tether_planner) StderrLine: {'line': b'  Update the VERSION argument <min> value or use a ...<max> suffix to tell\n'}
+[3.776234] (tether_planner) StderrLine: {'line': b'  CMake that the project does not need compatibility with older versions.\n'}
+[3.776268] (tether_planner) StderrLine: {'line': b'\n'}
+[3.776301] (tether_planner) StderrLine: {'line': b'\x1b[0m\n'}
+[3.800637] (tether_planner) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found version "3.8.10") \n'}
+[3.803222] (tether_planner) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[3.811507] (-) TimerEvent: {}
+[3.892890] (tether_planner) StdoutLine: {'line': b'-- Using Python nosetests: /usr/bin/nosetests3\n'}
+[3.911647] (-) TimerEvent: {}
+[4.012062] (-) TimerEvent: {}
+[4.074878] (tether_planner) StdoutLine: {'line': b'-- catkin 0.8.10\n'}
+[4.075218] (tether_planner) StdoutLine: {'line': b'-- BUILD_SHARED_LIBS is on\n'}
+[4.112239] (-) TimerEvent: {}
+[4.212736] (-) TimerEvent: {}
+[4.313101] (-) TimerEvent: {}
+[4.413506] (-) TimerEvent: {}
+[4.445657] (tether_planner) StdoutLine: {'line': b'-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy\n'}
+[4.513712] (-) TimerEvent: {}
+[4.602321] (tether_planner) StderrLine: {'line': b'\x1b[33mCMake Warning at /opt/ros/noetic/share/catkin/cmake/catkin_package.cmake:166 (message):\n'}
+[4.602584] (tether_planner) StderrLine: {'line': b"  catkin_package() DEPENDS on 'EIGEN3' but neither 'EIGEN3_INCLUDE_DIRS' nor\n"}
+[4.602636] (tether_planner) StderrLine: {'line': b"  'EIGEN3_LIBRARIES' is defined.\n"}
+[4.602701] (tether_planner) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[4.602737] (tether_planner) StderrLine: {'line': b'  /opt/ros/noetic/share/catkin/cmake/catkin_package.cmake:102 (_catkin_package)\n'}
+[4.602774] (tether_planner) StderrLine: {'line': b'  CMakeLists.txt:15 (catkin_package)\n'}
+[4.602819] (tether_planner) StderrLine: {'line': b'\n'}
+[4.602868] (tether_planner) StderrLine: {'line': b'\x1b[0m\n'}
+[4.602907] (tether_planner) StderrLine: {'line': b'\x1b[33mCMake Warning at /opt/ros/noetic/share/catkin/cmake/catkin_package.cmake:166 (message):\n'}
+[4.602941] (tether_planner) StderrLine: {'line': b"  catkin_package() DEPENDS on 'CUDA' but neither 'CUDA_INCLUDE_DIRS' nor\n"}
+[4.602986] (tether_planner) StderrLine: {'line': b"  'CUDA_LIBRARIES' is defined.\n"}
+[4.603022] (tether_planner) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[4.603056] (tether_planner) StderrLine: {'line': b'  /opt/ros/noetic/share/catkin/cmake/catkin_package.cmake:102 (_catkin_package)\n'}
+[4.603089] (tether_planner) StderrLine: {'line': b'  CMakeLists.txt:15 (catkin_package)\n'}
+[4.603141] (tether_planner) StderrLine: {'line': b'\n'}
+[4.603180] (tether_planner) StderrLine: {'line': b'\x1b[0m\n'}
+[4.603214] (tether_planner) StderrLine: {'line': b'\x1b[33mCMake Warning at /opt/ros/noetic/share/catkin/cmake/catkin_package.cmake:166 (message):\n'}
+[4.603248] (tether_planner) StderrLine: {'line': b"  catkin_package() DEPENDS on 'OMPL' but neither 'OMPL_INCLUDE_DIRS' nor\n"}
+[4.603283] (tether_planner) StderrLine: {'line': b"  'OMPL_LIBRARIES' is defined.\n"}
+[4.603316] (tether_planner) StderrLine: {'line': b'Call Stack (most recent call first):\n'}
+[4.603350] (tether_planner) StderrLine: {'line': b'  /opt/ros/noetic/share/catkin/cmake/catkin_package.cmake:102 (_catkin_package)\n'}
+[4.603383] (tether_planner) StderrLine: {'line': b'  CMakeLists.txt:15 (catkin_package)\n'}
+[4.603421] (tether_planner) StderrLine: {'line': b'\n'}
+[4.603454] (tether_planner) StderrLine: {'line': b'\x1b[0m\n'}
+[4.613929] (-) TimerEvent: {}
+[4.714370] (-) TimerEvent: {}
+[4.721165] (tether_planner) StdoutLine: {'line': b'-- Found CUDAToolkit: /usr/local/cuda-12.4/include (found version "12.4.99") \n'}
+[4.814514] (-) TimerEvent: {}
+[4.914917] (-) TimerEvent: {}
+[5.015382] (-) TimerEvent: {}
+[5.115776] (-) TimerEvent: {}
+[5.216698] (-) TimerEvent: {}
+[5.318427] (-) TimerEvent: {}
+[5.418821] (-) TimerEvent: {}
+[5.519200] (-) TimerEvent: {}
+[5.619616] (-) TimerEvent: {}
+[5.720006] (-) TimerEvent: {}
+[5.820376] (-) TimerEvent: {}
+[5.920769] (-) TimerEvent: {}
+[6.021204] (-) TimerEvent: {}
+[6.121570] (-) TimerEvent: {}
+[6.221958] (-) TimerEvent: {}
+[6.322310] (-) TimerEvent: {}
+[6.422669] (-) TimerEvent: {}
+[6.523046] (-) TimerEvent: {}
+[6.623443] (-) TimerEvent: {}
+[6.723883] (-) TimerEvent: {}
+[6.824266] (-) TimerEvent: {}
+[6.924609] (-) TimerEvent: {}
+[7.024968] (-) TimerEvent: {}
+[7.056038] (tether_planner) StdoutLine: {'line': b'-- Configuring done\n'}
+[7.120974] (tether_planner) StdoutLine: {'line': b'-- Generating done\n'}
+[7.125158] (-) TimerEvent: {}
+[7.144238] (tether_planner) StdoutLine: {'line': b'-- Build files have been written to: /home/hakim/tether_planning_ws/src/tether_planner/build/tether_planner\n'}
+[7.154957] (tether_planner) CommandEnded: {'returncode': 0}
+[7.155685] (tether_planner) JobProgress: {'identifier': 'tether_planner', 'progress': 'build'}
+[7.157913] (tether_planner) Command: {'cmd': ['/opt/cmake-3.22.1/bin/cmake', '--build', '/home/hakim/tether_planning_ws/src/tether_planner/build/tether_planner', '--', '-j16', '-l16'], 'cwd': '/home/hakim/tether_planning_ws/src/tether_planner/build/tether_planner', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hakim'), ('ROS_PACKAGE_PATH', '/home/hakim/tether_planning_ws/src/bluerov2_nmpc:/home/hakim/tether_planning_ws/src/bluerov2_trajectory:/home/hakim/tether_planning_ws/src/ea_mpc:/home/hakim/tether_planning_ws/src/motion_capture_system/mocap_base:/home/hakim/tether_planning_ws/src/motion_capture_system/mocap_qualisys:/home/hakim/tether_planning_ws/src/motion_capture_system/mocap_vicon:/home/hakim/tether_planning_ws/src/tether_planner:/opt/ros/noetic/share'), ('GIT_ASKPASS', '/home/hakim/.vscode-server/bin/91fa95bccb027ece6a968589bb1d662fa9c8e170/extensions/git/dist/askpass.sh'), ('ROS_ETC_DIR', '/opt/ros/noetic/etc/ros'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/home/hakim/tether_planning_ws/devel/lib:/opt/ros/noetic/lib:/usr/local/cuda-12.4/lib64:/usr/local/cuda-12.4/lib64:/usr/local/cuda-12.4/lib64'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/hakim'), ('OLDPWD', '/home/hakim/tether_planning_ws/src'), ('TERM_PROGRAM_VERSION', '1.100.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-89e5c150-06f8-4d21-9036-8fee3412e751.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/hakim/.vscode-server/bin/91fa95bccb027ece6a968589bb1d662fa9c8e170/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/hakim/.vscode-server/bin/91fa95bccb027ece6a968589bb1d662fa9c8e170/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/hakim/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-x64/bundled/libs/debugpy'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('WSL_DISTRO_NAME', 'Ubuntu-20.04'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'noetic'), ('LOGNAME', 'hakim'), ('NAME', 'Code'), ('WSL_INTEROP', '/run/WSL/1288_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '1'), ('PKG_CONFIG_PATH', '/home/hakim/tether_planning_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig'), ('TERM', 'xterm-256color'), ('PATH', '/opt/ros/noetic/bin:/usr/local/cuda-12.4/bin:/opt/cmake-3.22.1/bin:/home/hakim/.vscode-server/bin/91fa95bccb027ece6a968589bb1d662fa9c8e170/bin/remote-cli:/usr/local/cuda-12.4/bin:/opt/cmake-3.22.1/bin:/home/hakim/.local/bin:/usr/local/cuda-12.4/bin:/opt/cmake-3.22.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/TortoiseSVN/bin:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/aha/AppData/Local/Programs/Python/Python313:/mnt/c/Users/aha/AppData/Local/anaconda3/Scripts:/mnt/c/Users/aha/AppData/Local/anaconda3/:/mnt/c/Users/aha/AppData/Local/anaconda3/Library/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/socat-1.7.3.0:/mnt/c/Users/aha/AppData/Local/Programs/Python/Python313/Scripts/:/mnt/c/Users/aha/AppData/Local/Programs/Python/Python313/:/mnt/c/Users/aha/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/aha/AppData/Local/Microsoft/WindowsApps:/mnt/c/texlive/2024/bin/windows:/mnt/c/cygwin/bin:/snap/bin:/home/hakim/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-x64/bundled/scripts/noConfigScripts:/home/hakim/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/hakim/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-f87ade50c07665ae.txt'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('ROSLISP_PACKAGE_DIRECTORIES', '/home/hakim/tether_planning_ws/devel/share/common-lisp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-7949cb36df.sock'), ('ROS_ROOT', '/opt/ros/noetic/share/ros'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '0'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:2f03f8ea-6aa0-4021-a692-c9555e514c6d'), ('ROS_MASTER_URI', 'http://localhost:11311'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/hakim/tether_planning_ws/src/tether_planner/build/tether_planner'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/hakim/tether_planning_ws/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('VTE_VERSION', '6003'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/hakim/tether_planning_ws/devel:/opt/ros/noetic'), ('WSLENV', 'ELECTRON_RUN_AS_NODE/w:')]), 'shell': False}
+[7.175225] (tether_planner) StdoutLine: {'line': b'[ 11%] \x1b[32mBuilding CXX object CMakeFiles/tether_planner_node.dir/src/tether_planner_main.cpp.o\x1b[0m\n'}
+[7.175667] (tether_planner) StdoutLine: {'line': b'[ 22%] \x1b[32mBuilding CXX object CMakeFiles/tether_planner_node.dir/src/publishers.cpp.o\x1b[0m\n'}
+[7.176011] (tether_planner) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/tether_planner_node.dir/src/helper_functions.cpp.o\x1b[0m\n'}
+[7.176261] (tether_planner) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/tether_planner_node.dir/src/global_vars.cpp.o\x1b[0m\n'}
+[7.176452] (tether_planner) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/tether_planner_node.dir/src/my_motion_validator.cpp.o\x1b[0m\n'}
+[7.176535] (tether_planner) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/tether_planner_node.dir/src/tether_planner.cpp.o\x1b[0m\n'}
+[7.176645] (tether_planner) StdoutLine: {'line': b'[ 77%] \x1b[32mBuilding CXX object CMakeFiles/tether_planner_node.dir/src/collision_checker.cpp.o\x1b[0m\n'}
+[7.176885] (tether_planner) StdoutLine: {'line': b'[ 88%] \x1b[32mBuilding CXX object CMakeFiles/tether_planner_node.dir/src/nvblox_functions.cpp.o\x1b[0m\n'}
+[7.225394] (-) TimerEvent: {}
+[7.325872] (-) TimerEvent: {}
+[7.426373] (-) TimerEvent: {}
+[7.526885] (-) TimerEvent: {}
+[7.627312] (-) TimerEvent: {}
+[7.727834] (-) TimerEvent: {}
+[7.828456] (-) TimerEvent: {}
+[7.928945] (-) TimerEvent: {}
+[8.029441] (-) TimerEvent: {}
+[8.129951] (-) TimerEvent: {}
+[8.230608] (-) TimerEvent: {}
+[8.331135] (-) TimerEvent: {}
+[8.431656] (-) TimerEvent: {}
+[8.532272] (-) TimerEvent: {}
+[8.632803] (-) TimerEvent: {}
+[8.733269] (-) TimerEvent: {}
+[8.833938] (-) TimerEvent: {}
+[8.934868] (-) TimerEvent: {}
+[9.035523] (-) TimerEvent: {}
+[9.136016] (-) TimerEvent: {}
+[9.236517] (-) TimerEvent: {}
+[9.337055] (-) TimerEvent: {}
+[9.438905] (-) TimerEvent: {}
+[9.539360] (-) TimerEvent: {}
+[9.639821] (-) TimerEvent: {}
+[9.740361] (-) TimerEvent: {}
+[9.840859] (-) TimerEvent: {}
+[9.941268] (-) TimerEvent: {}
+[10.041780] (-) TimerEvent: {}
+[10.142161] (-) TimerEvent: {}
+[10.242610] (-) TimerEvent: {}
+[10.343061] (-) TimerEvent: {}
+[10.443461] (-) TimerEvent: {}
+[10.543989] (-) TimerEvent: {}
+[10.644438] (-) TimerEvent: {}
+[10.744973] (-) TimerEvent: {}
+[10.845476] (-) TimerEvent: {}
+[10.946002] (-) TimerEvent: {}
+[11.046607] (-) TimerEvent: {}
+[11.147145] (-) TimerEvent: {}
+[11.247756] (-) TimerEvent: {}
+[11.348411] (-) TimerEvent: {}
+[11.448941] (-) TimerEvent: {}
+[11.549441] (-) TimerEvent: {}
+[11.649947] (-) TimerEvent: {}
+[11.750720] (-) TimerEvent: {}
+[11.851252] (-) TimerEvent: {}
+[11.951771] (-) TimerEvent: {}
+[12.052241] (-) TimerEvent: {}
+[12.152648] (-) TimerEvent: {}
+[12.253143] (-) TimerEvent: {}
+[12.353608] (-) TimerEvent: {}
+[12.454006] (-) TimerEvent: {}
+[12.554484] (-) TimerEvent: {}
+[12.655051] (-) TimerEvent: {}
+[12.755511] (-) TimerEvent: {}
+[12.856047] (-) TimerEvent: {}
+[12.956439] (-) TimerEvent: {}
+[13.056917] (-) TimerEvent: {}
+[13.157338] (-) TimerEvent: {}
+[13.257833] (-) TimerEvent: {}
+[13.358314] (-) TimerEvent: {}
+[13.458823] (-) TimerEvent: {}
+[13.559243] (-) TimerEvent: {}
+[13.659728] (-) TimerEvent: {}
+[13.760116] (-) TimerEvent: {}
+[13.860509] (-) TimerEvent: {}
+[13.960965] (-) TimerEvent: {}
+[14.061404] (-) TimerEvent: {}
+[14.161924] (-) TimerEvent: {}
+[14.262559] (-) TimerEvent: {}
+[14.363121] (-) TimerEvent: {}
+[14.463595] (-) TimerEvent: {}
+[14.564235] (-) TimerEvent: {}
+[14.664764] (-) TimerEvent: {}
+[14.765230] (-) TimerEvent: {}
+[14.865696] (-) TimerEvent: {}
+[14.966279] (-) TimerEvent: {}
+[15.067029] (-) TimerEvent: {}
+[15.167874] (-) TimerEvent: {}
+[15.268486] (-) TimerEvent: {}
+[15.369022] (-) TimerEvent: {}
+[15.469576] (-) TimerEvent: {}
+[15.570048] (-) TimerEvent: {}
+[15.670520] (-) TimerEvent: {}
+[15.770894] (-) TimerEvent: {}
+[15.871296] (-) TimerEvent: {}
+[15.971693] (-) TimerEvent: {}
+[16.072255] (-) TimerEvent: {}
+[16.172638] (-) TimerEvent: {}
+[16.273044] (-) TimerEvent: {}
+[16.373580] (-) TimerEvent: {}
+[16.474096] (-) TimerEvent: {}
+[16.574554] (-) TimerEvent: {}
+[16.675026] (-) TimerEvent: {}
+[16.775431] (-) TimerEvent: {}
+[16.875865] (-) TimerEvent: {}
+[16.976267] (-) TimerEvent: {}
+[17.076724] (-) TimerEvent: {}
+[17.177250] (-) TimerEvent: {}
+[17.277622] (-) TimerEvent: {}
+[17.378132] (-) TimerEvent: {}
+[17.478633] (-) TimerEvent: {}
+[17.579195] (-) TimerEvent: {}
+[17.679705] (-) TimerEvent: {}
+[17.780210] (-) TimerEvent: {}
+[17.880780] (-) TimerEvent: {}
+[17.981421] (-) TimerEvent: {}
+[18.081856] (-) TimerEvent: {}
+[18.182450] (-) TimerEvent: {}
+[18.282961] (-) TimerEvent: {}
+[18.383436] (-) TimerEvent: {}
+[18.484097] (-) TimerEvent: {}
+[18.584573] (-) TimerEvent: {}
+[18.685024] (-) TimerEvent: {}
+[18.785528] (-) TimerEvent: {}
+[18.886016] (-) TimerEvent: {}
+[18.986517] (-) TimerEvent: {}
+[19.087063] (-) TimerEvent: {}
+[19.187774] (-) TimerEvent: {}
+[19.288260] (-) TimerEvent: {}
+[19.388759] (-) TimerEvent: {}
+[19.489230] (-) TimerEvent: {}
+[19.589703] (-) TimerEvent: {}
+[19.690216] (-) TimerEvent: {}
+[19.790712] (-) TimerEvent: {}
+[19.891156] (-) TimerEvent: {}
+[19.991569] (-) TimerEvent: {}
+[20.014148] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/publishers.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid publishBlueRovMarker(ros::Publisher&, const std::vector<double>&, const std::vector<double>&, const string&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[20.014377] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/publishers.cpp:7:32:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kcurrent_att_quat\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[20.014427] (tether_planner) StderrLine: {'line': b'    7 |     \x1b[01;35m\x1b[Kconst std::vector<double>& current_att_quat\x1b[m\x1b[K,\n'}
+[20.014467] (tether_planner) StderrLine: {'line': b'      |     \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[20.091718] (-) TimerEvent: {}
+[20.192138] (-) TimerEvent: {}
+[20.292688] (-) TimerEvent: {}
+[20.393185] (-) TimerEvent: {}
+[20.493690] (-) TimerEvent: {}
+[20.594129] (-) TimerEvent: {}
+[20.694703] (-) TimerEvent: {}
+[20.795195] (-) TimerEvent: {}
+[20.895695] (-) TimerEvent: {}
+[20.996339] (-) TimerEvent: {}
+[21.097048] (-) TimerEvent: {}
+[21.197545] (-) TimerEvent: {}
+[21.298051] (-) TimerEvent: {}
+[21.307649] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/helper_functions.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kbool isPointInsideCylinder(const Vector3f&, const cylinder_obs&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[21.307930] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/helper_functions.cpp:279:19:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[KclosestPointOnAxis\x1b[m\x1b[K\xe2\x80\x99 set but not used [\x1b[01;35m\x1b[K-Wunused-but-set-variable\x1b[m\x1b[K]\n'}
+[21.308011] (tether_planner) StderrLine: {'line': b'  279 |   Eigen::Vector3f \x1b[01;35m\x1b[KclosestPointOnAxis\x1b[m\x1b[K =\n'}
+[21.308103] (tether_planner) StderrLine: {'line': b'      |                   \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[21.327237] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kompl::geometric::PathGeometric TetherPlanner::findNextGoal(const ompl::geometric::PathGeometric&, const std::vector<double>&, const std::vector<double>&, double&, const std::shared_ptr<ompl::base::RealVectorStateSpace>&, const std::shared_ptr<ompl::base::SpaceInformation>&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[21.327556] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:89:25:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<std::vector<double> >::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[21.327665] (tether_planner) StderrLine: {'line': b'   89 |       for (int i = 0; \x1b[01;35m\x1b[Ki < exit_points_list_.size()\x1b[m\x1b[K; i++) {\n'}
+[21.327726] (tether_planner) StderrLine: {'line': b'      |                       \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[21.341785] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<double> TetherPlanner::FindNextPointAlongPath(const std::vector<double>&, const std::vector<double>&, const ompl::geometric::PathGeometric&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[21.342121] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:296:32:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kcurrent_position\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[21.342224] (tether_planner) StderrLine: {'line': b'  296 |     \x1b[01;35m\x1b[Kconst std::vector<double> &current_position\x1b[m\x1b[K,\n'}
+[21.342291] (tether_planner) StderrLine: {'line': b'      |     \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[21.345764] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kompl::geometric::PathGeometric TetherPlanner::CalculateAlternativePath_i(int, ompl::geometric::PathGeometric, std::vector<double>, const std::shared_ptr<ompl::base::SpaceInformation>&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[21.346044] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:445:17:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kstate\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[21.346179] (tether_planner) StderrLine: {'line': b'  445 |     const auto *\x1b[01;35m\x1b[Kstate\x1b[m\x1b[K = Alternative_Path.getState(i)\n'}
+[21.346255] (tether_planner) StderrLine: {'line': b'      |                 \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[21.347264] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kompl::geometric::PathGeometric TetherPlanner::CalculateAlternativePath_iRRT(int, ompl::geometric::PathGeometric, std::vector<double>, const std::shared_ptr<ompl::base::SpaceInformation>&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[21.347557] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:520:15:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kstate\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[21.347661] (tether_planner) StderrLine: {'line': b'  520 |   const auto *\x1b[01;35m\x1b[Kstate\x1b[m\x1b[K = Alternative_Path.getState(i)\n'}
+[21.347735] (tether_planner) StderrLine: {'line': b'      |               \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[21.349974] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kompl::geometric::PathGeometric TetherPlanner::SearchAlternativePath(ompl::geometric::PathGeometric, std::vector<double>, const std::shared_ptr<ompl::base::SpaceInformation>&, double)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[21.350330] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:565:21:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::size_t\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[21.350561] (tether_planner) StderrLine: {'line': b'  565 |   for (int i = 3; \x1b[01;35m\x1b[Ki < tether.getStateCount()-2\x1b[m\x1b[K; i++) {\n'}
+[21.350753] (tether_planner) StderrLine: {'line': b'      |                   \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[21.350951] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/helper_functions.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid densifyPointCloud(pcl::PointCloud<pcl::PointXYZ>::Ptr&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[21.351155] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/helper_functions.cpp:486:28:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kvoid pcl::MovingLeastSquares<PointInT, PointOutT>::setPolynomialFit(bool) [with PointInT = pcl::PointXYZ; PointOutT = pcl::PointXYZ]\x1b[m\x1b[K\xe2\x80\x99 is deprecated: use setPolynomialOrder() instead [\x1b[01;35m\x1b[K-Wdeprecated-declarations\x1b[m\x1b[K]\n'}
+[21.351533] (tether_planner) StderrLine: {'line': b'  486 |   mls.setPolynomialFit(true\x1b[01;35m\x1b[K)\x1b[m\x1b[K;\n'}
+[21.351668] (tether_planner) StderrLine: {'line': b'      |                            \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[21.351761] (tether_planner) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/include/global_vars.hpp:21\x1b[m\x1b[K,\n'}
+[21.351860] (tether_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/include/publishers.hpp:23\x1b[m\x1b[K,\n'}
+[21.352001] (tether_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/include/helper_functions.hpp:3\x1b[m\x1b[K,\n'}
+[21.352102] (tether_planner) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/helper_functions.cpp:1\x1b[m\x1b[K:\n'}
+[21.352183] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/pcl-1.10/pcl/surface/mls.h:361:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kdeclared here\n'}
+[21.352264] (tether_planner) StderrLine: {'line': b'  361 |       \x1b[01;36m\x1b[KsetPolynomialFit\x1b[m\x1b[K (bool polynomial_fit)\n'}
+[21.352365] (tether_planner) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[21.355899] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<double> TetherPlanner::GetNextPointAlongPath(const ompl::geometric::PathGeometric&, std::vector<double>, std::vector<double>, const std::shared_ptr<ompl::base::SpaceInformation>&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[21.356259] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:770:10:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kdelta_safe\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[21.356437] (tether_planner) StderrLine: {'line': b'  770 |   double \x1b[01;35m\x1b[Kdelta_safe\x1b[m\x1b[K = 1.0;\n'}
+[21.356563] (tether_planner) StderrLine: {'line': b'      |          \x1b[01;35m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[21.356902] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:762:31:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kcurrent_position\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[21.357050] (tether_planner) StderrLine: {'line': b'  762 |     \x1b[01;35m\x1b[Kconst std::vector<double> current_position\x1b[m\x1b[K, const std::vector<double> goal,\n'}
+[21.357128] (tether_planner) StderrLine: {'line': b'      |     \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[21.398228] (-) TimerEvent: {}
+[21.498857] (-) TimerEvent: {}
+[21.599361] (-) TimerEvent: {}
+[21.700002] (-) TimerEvent: {}
+[21.800648] (-) TimerEvent: {}
+[21.901517] (-) TimerEvent: {}
+[22.002058] (-) TimerEvent: {}
+[22.102639] (-) TimerEvent: {}
+[22.203147] (-) TimerEvent: {}
+[22.303614] (-) TimerEvent: {}
+[22.404090] (-) TimerEvent: {}
+[22.450196] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/helper_functions.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid removeWaypoint(std::vector<std::vector<double> >&, int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[22.450472] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/helper_functions.cpp:872:27:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<std::vector<double> >::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[22.450524] (tether_planner) StderrLine: {'line': b'  872 |   if (index >= 0 && \x1b[01;35m\x1b[Kindex < way_point_traj.size()\x1b[m\x1b[K) {\n'}
+[22.450564] (tether_planner) StderrLine: {'line': b'      |                     \x1b[01;35m\x1b[K~~~~~~^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[22.451658] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/helper_functions.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid initializePointCloud(pcl::PointCloud<pcl::PointXYZ>::Ptr&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[22.451812] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/helper_functions.cpp:882:11:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kscale_factor\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[22.451854] (tether_planner) StderrLine: {'line': b'  882 |     float \x1b[01;35m\x1b[Kscale_factor\x1b[m\x1b[K = 1.0;\n'}
+[22.451892] (tether_planner) StderrLine: {'line': b'      |           \x1b[01;35m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[22.478303] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/helper_functions.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid initializeROS(int, char**, ros::NodeHandle&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[22.478655] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/helper_functions.cpp:1027:60:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Knh\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[22.478822] (tether_planner) StderrLine: {'line': b' 1027 | void initializeROS(int argc, char **argv, \x1b[01;35m\x1b[Kros::NodeHandle &nh\x1b[m\x1b[K)\n'}
+[22.478900] (tether_planner) StderrLine: {'line': b'      |                                           \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~^~\x1b[m\x1b[K\n'}
+[22.503053] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/helper_functions.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kvoid initializeGlobalVariables()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[22.503336] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/helper_functions.cpp:1088:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[KdistanceThreshold\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[22.503408] (tether_planner) StderrLine: {'line': b' 1088 |     double \x1b[01;35m\x1b[KdistanceThreshold\x1b[m\x1b[K = 10;\n'}
+[22.503470] (tether_planner) StderrLine: {'line': b'      |            \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[22.504209] (-) TimerEvent: {}
+[22.601431] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<double> TetherPlanner::getPointAlongPath(const ompl::geometric::PathGeometric&, int)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[22.601755] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:1189:17:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::size_t\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[22.601855] (tether_planner) StderrLine: {'line': b' 1189 | if (i >= 0 && \x1b[01;35m\x1b[Ki < path.getStateCount()\x1b[m\x1b[K) {\n'}
+[22.601928] (tether_planner) StderrLine: {'line': b'      |               \x1b[01;35m\x1b[K~~^~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[22.604343] (-) TimerEvent: {}
+[22.704760] (-) TimerEvent: {}
+[22.786345] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kint main(int, char**)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[22.786654] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:246:28:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<std::vector<double> >::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[22.786784] (tether_planner) StderrLine: {'line': b'  246 |     if (count > 0 && \x1b[01;35m\x1b[Kcount < way_point_traj.size()\x1b[m\x1b[K) {\n'}
+[22.786853] (tether_planner) StderrLine: {'line': b'      |                      \x1b[01;35m\x1b[K~~~~~~^~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[22.787806] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:256:15:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<std::vector<double> >::size_type\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[22.787993] (tether_planner) StderrLine: {'line': b'  256 |         \x1b[01;35m\x1b[Kcount < way_point_traj.size() - 1\x1b[m\x1b[K && finding_safe_path == false) {\n'}
+[22.788095] (tether_planner) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[22.794652] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:344:53:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::size_t\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[22.795002] (tether_planner) StderrLine: {'line': b'  344 |     if (PathSafe.getStateCount() > 2 && \x1b[01;35m\x1b[Ki_safe_path == PathSafe.getStateCount()-2\x1b[m\x1b[K) {\n'}
+[22.795118] (tether_planner) StderrLine: {'line': b'      |                                         \x1b[01;35m\x1b[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[22.798739] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:365:9:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kcalculated_final_segment\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[22.799138] (tether_planner) StderrLine: {'line': b'  365 |    bool \x1b[01;35m\x1b[Kcalculated_final_segment\x1b[m\x1b[K = simplifier.ropeRRTtether( PathIntermediate, contactPoints, delta,\n'}
+[22.799271] (tether_planner) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[22.801029] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:426:22:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Kint\x1b[m\x1b[K\xe2\x80\x99 and \xe2\x80\x98\x1b[01m\x1b[Kstd::size_t\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} [\x1b[01;35m\x1b[K-Wsign-compare\x1b[m\x1b[K]\n'}
+[22.801284] (tether_planner) StderrLine: {'line': b'  426 |      if (\x1b[01;35m\x1b[Ki_safe_path >= PathSafe.getStateCount()\x1b[m\x1b[K ||\n'}
+[22.801382] (tether_planner) StderrLine: {'line': b'      |          \x1b[01;35m\x1b[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[22.801951] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:445:19:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kstate\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[22.802132] (tether_planner) StderrLine: {'line': b'  445 |       const auto *\x1b[01;35m\x1b[Kstate\x1b[m\x1b[K =\n'}
+[22.802319] (tether_planner) StderrLine: {'line': b'      |                   \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[22.802398] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:453:21:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kstate\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[22.802478] (tether_planner) StderrLine: {'line': b'  453 |         const auto *\x1b[01;35m\x1b[Kstate\x1b[m\x1b[K =\n'}
+[22.802537] (tether_planner) StderrLine: {'line': b'      |                     \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[22.802897] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:231:10:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Ktether_computed\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[22.802975] (tether_planner) StderrLine: {'line': b'  231 |     bool \x1b[01;35m\x1b[Ktether_computed\x1b[m\x1b[K = simplifier.ropeRRTtether(P_t, contactPoints, delta,\n'}
+[22.803028] (tether_planner) StderrLine: {'line': b'      |          \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[22.803068] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:234:8:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kpath_computed\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[22.803108] (tether_planner) StderrLine: {'line': b'  234 |   bool \x1b[01;35m\x1b[Kpath_computed\x1b[m\x1b[K = simplifier_path.ropeRRTtether(P_t_path, contactPoints, delta,\n'}
+[22.803147] (tether_planner) StderrLine: {'line': b'      |        \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[22.803185] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:266:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[KTether_length\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[22.803224] (tether_planner) StderrLine: {'line': b'  266 |     double \x1b[01;35m\x1b[KTether_length\x1b[m\x1b[K = planner.findTetherLength(P_t);\n'}
+[22.803262] (tether_planner) StderrLine: {'line': b'      |            \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[22.803302] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:305:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Ksafe_distance\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[22.803341] (tether_planner) StderrLine: {'line': b'  305 |     double \x1b[01;35m\x1b[Ksafe_distance\x1b[m\x1b[K = 1.0;\n'}
+[22.803379] (tether_planner) StderrLine: {'line': b'      |            \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[22.803417] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:24:13:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kvariable \xe2\x80\x98\x1b[01m\x1b[Klast_time\x1b[m\x1b[K\xe2\x80\x99 set but not used [\x1b[01;35m\x1b[K-Wunused-but-set-variable\x1b[m\x1b[K]\n'}
+[22.803458] (tether_planner) StderrLine: {'line': b'   24 |   ros::Time \x1b[01;35m\x1b[Klast_time\x1b[m\x1b[K =\n'}
+[22.803520] (tether_planner) StderrLine: {'line': b'      |             \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[22.803581] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:104:9:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kleaf_size\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[22.803621] (tether_planner) StderrLine: {'line': b'  104 |   float \x1b[01;35m\x1b[Kleaf_size\x1b[m\x1b[K = 0.02f; // Adjust the leaf size as needed\n'}
+[22.803660] (tether_planner) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[22.803699] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:120:28:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kesdf_layer\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[22.803742] (tether_planner) StderrLine: {'line': b'  120 |   const nvblox::EsdfLayer& \x1b[01;35m\x1b[Kesdf_layer\x1b[m\x1b[K = pipe_map->esdf_layer();\n'}
+[22.803780] (tether_planner) StderrLine: {'line': b'      |                            \x1b[01;35m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[22.803819] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner_main.cpp:166:8:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kfirst_compute\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-variable\x1b[m\x1b[K]\n'}
+[22.803860] (tether_planner) StderrLine: {'line': b'  166 |   bool \x1b[01;35m\x1b[Kfirst_compute\x1b[m\x1b[K = true;\n'}
+[22.803899] (tether_planner) StderrLine: {'line': b'      |        \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[22.804844] (-) TimerEvent: {}
+[22.838043] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid TetherPlanner::PopTetherCentroid(ompl::geometric::PathGeometric&, const std::shared_ptr<ompl::base::SpaceInformation>&, double)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[22.838326] (tether_planner) StderrLine: {'line': b'\x1b[01m\x1b[K/home/hakim/tether_planning_ws/src/tether_planner/src/tether_planner.cpp:1630:130:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Ksi\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K-Wunused-parameter\x1b[m\x1b[K]\n'}
+[22.838448] (tether_planner) StderrLine: {'line': b' 1630 | void TetherPlanner::PopTetherCentroid(ompl::geometric::PathGeometric &path, \x1b[01;35m\x1b[Kconst std::shared_ptr<ompl::base::SpaceInformation> &si\x1b[m\x1b[K, double delta) {\n'}
+[22.838540] (tether_planner) StderrLine: {'line': b'      |                                                                             \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~\x1b[m\x1b[K\n'}
+[22.905034] (-) TimerEvent: {}
+[23.005519] (-) TimerEvent: {}
+[23.106020] (-) TimerEvent: {}
+[23.206516] (-) TimerEvent: {}
+[23.307022] (-) TimerEvent: {}
+[23.407581] (-) TimerEvent: {}
+[23.508189] (-) TimerEvent: {}
+[23.608666] (-) TimerEvent: {}
+[23.709133] (-) TimerEvent: {}
+[23.809520] (-) TimerEvent: {}
+[23.909979] (-) TimerEvent: {}
+[24.010401] (-) TimerEvent: {}
+[24.110811] (-) TimerEvent: {}
+[24.211320] (-) TimerEvent: {}
+[24.311888] (-) TimerEvent: {}
+[24.412498] (-) TimerEvent: {}
+[24.513017] (-) TimerEvent: {}
+[24.613589] (-) TimerEvent: {}
+[24.714181] (-) TimerEvent: {}
+[24.814780] (-) TimerEvent: {}
+[24.915194] (-) TimerEvent: {}
+[25.015790] (-) TimerEvent: {}
+[25.116461] (-) TimerEvent: {}
+[25.217080] (-) TimerEvent: {}
+[25.317917] (-) TimerEvent: {}
+[25.418400] (-) TimerEvent: {}
+[25.518947] (-) TimerEvent: {}
+[25.619412] (-) TimerEvent: {}
+[25.719902] (-) TimerEvent: {}
+[25.820288] (-) TimerEvent: {}
+[25.920663] (-) TimerEvent: {}
+[26.021093] (-) TimerEvent: {}
+[26.121503] (-) TimerEvent: {}
+[26.221846] (-) TimerEvent: {}
+[26.322326] (-) TimerEvent: {}
+[26.422677] (-) TimerEvent: {}
+[26.523025] (-) TimerEvent: {}
+[26.623424] (-) TimerEvent: {}
+[26.723896] (-) TimerEvent: {}
+[26.824342] (-) TimerEvent: {}
+[26.924755] (-) TimerEvent: {}
+[27.025263] (-) TimerEvent: {}
+[27.125741] (-) TimerEvent: {}
+[27.226125] (-) TimerEvent: {}
+[27.326512] (-) TimerEvent: {}
+[27.426859] (-) TimerEvent: {}
+[27.527231] (-) TimerEvent: {}
+[27.627695] (-) TimerEvent: {}
+[27.728216] (-) TimerEvent: {}
+[27.828810] (-) TimerEvent: {}
+[27.929324] (-) TimerEvent: {}
+[28.029818] (-) TimerEvent: {}
+[28.130384] (-) TimerEvent: {}
+[28.231053] (-) TimerEvent: {}
+[28.331675] (-) TimerEvent: {}
+[28.432276] (-) TimerEvent: {}
+[28.533041] (-) TimerEvent: {}
+[28.633553] (-) TimerEvent: {}
+[28.734044] (-) TimerEvent: {}
+[28.834512] (-) TimerEvent: {}
+[28.934976] (-) TimerEvent: {}
+[29.035465] (-) TimerEvent: {}
+[29.135932] (-) TimerEvent: {}
+[29.236321] (-) TimerEvent: {}
+[29.336737] (-) TimerEvent: {}
+[29.437177] (-) TimerEvent: {}
+[29.537618] (-) TimerEvent: {}
+[29.638280] (-) TimerEvent: {}
+[29.738811] (-) TimerEvent: {}
+[29.839259] (-) TimerEvent: {}
+[29.939624] (-) TimerEvent: {}
+[30.040046] (-) TimerEvent: {}
+[30.140542] (-) TimerEvent: {}
+[30.240976] (-) TimerEvent: {}
+[30.341433] (-) TimerEvent: {}
+[30.441921] (-) TimerEvent: {}
+[30.542407] (-) TimerEvent: {}
+[30.642871] (-) TimerEvent: {}
+[30.743294] (-) TimerEvent: {}
+[30.843664] (-) TimerEvent: {}
+[30.944057] (-) TimerEvent: {}
+[31.044649] (-) TimerEvent: {}
+[31.145298] (-) TimerEvent: {}
+[31.245966] (-) TimerEvent: {}
+[31.346613] (-) TimerEvent: {}
+[31.447398] (-) TimerEvent: {}
+[31.547854] (-) TimerEvent: {}
+[31.648371] (-) TimerEvent: {}
+[31.748967] (-) TimerEvent: {}
+[31.849567] (-) TimerEvent: {}
+[31.949977] (-) TimerEvent: {}
+[32.050468] (-) TimerEvent: {}
+[32.151080] (-) TimerEvent: {}
+[32.251617] (-) TimerEvent: {}
+[32.352079] (-) TimerEvent: {}
+[32.452501] (-) TimerEvent: {}
+[32.552893] (-) TimerEvent: {}
+[32.653291] (-) TimerEvent: {}
+[32.753676] (-) TimerEvent: {}
+[32.854072] (-) TimerEvent: {}
+[32.954487] (-) TimerEvent: {}
+[33.054966] (-) TimerEvent: {}
+[33.155412] (-) TimerEvent: {}
+[33.255812] (-) TimerEvent: {}
+[33.356325] (-) TimerEvent: {}
+[33.456794] (-) TimerEvent: {}
+[33.557222] (-) TimerEvent: {}
+[33.657681] (-) TimerEvent: {}
+[33.758049] (-) TimerEvent: {}
+[33.858434] (-) TimerEvent: {}
+[33.958927] (-) TimerEvent: {}
+[34.059396] (-) TimerEvent: {}
+[34.159830] (-) TimerEvent: {}
+[34.260336] (-) TimerEvent: {}
+[34.360728] (-) TimerEvent: {}
+[34.461218] (-) TimerEvent: {}
+[34.561700] (-) TimerEvent: {}
+[34.662192] (-) TimerEvent: {}
+[34.762671] (-) TimerEvent: {}
+[34.863081] (-) TimerEvent: {}
+[34.963489] (-) TimerEvent: {}
+[35.063876] (-) TimerEvent: {}
+[35.164382] (-) TimerEvent: {}
+[35.264838] (-) TimerEvent: {}
+[35.365399] (-) TimerEvent: {}
+[35.465798] (-) TimerEvent: {}
+[35.566163] (-) TimerEvent: {}
+[35.666538] (-) TimerEvent: {}
+[35.766973] (-) TimerEvent: {}
+[35.867425] (-) TimerEvent: {}
+[35.967847] (-) TimerEvent: {}
+[36.068259] (-) TimerEvent: {}
+[36.168617] (-) TimerEvent: {}
+[36.268978] (-) TimerEvent: {}
+[36.369362] (-) TimerEvent: {}
+[36.469733] (-) TimerEvent: {}
+[36.570141] (-) TimerEvent: {}
+[36.670553] (-) TimerEvent: {}
+[36.771082] (-) TimerEvent: {}
+[36.871454] (-) TimerEvent: {}
+[36.971882] (-) TimerEvent: {}
+[37.072475] (-) TimerEvent: {}
+[37.172858] (-) TimerEvent: {}
+[37.273288] (-) TimerEvent: {}
+[37.373631] (-) TimerEvent: {}
+[37.474004] (-) TimerEvent: {}
+[37.574392] (-) TimerEvent: {}
+[37.674860] (-) TimerEvent: {}
+[37.775243] (-) TimerEvent: {}
+[37.875628] (-) TimerEvent: {}
+[37.975958] (-) TimerEvent: {}
+[38.076298] (-) TimerEvent: {}
+[38.176750] (-) TimerEvent: {}
+[38.277119] (-) TimerEvent: {}
+[38.377522] (-) TimerEvent: {}
+[38.477959] (-) TimerEvent: {}
+[38.578433] (-) TimerEvent: {}
+[38.678822] (-) TimerEvent: {}
+[38.779198] (-) TimerEvent: {}
+[38.879608] (-) TimerEvent: {}
+[38.980151] (-) TimerEvent: {}
+[39.080680] (-) TimerEvent: {}
+[39.181075] (-) TimerEvent: {}
+[39.281440] (-) TimerEvent: {}
+[39.381977] (-) TimerEvent: {}
+[39.482420] (-) TimerEvent: {}
+[39.582826] (-) TimerEvent: {}
+[39.683226] (-) TimerEvent: {}
+[39.783766] (-) TimerEvent: {}
+[39.884339] (-) TimerEvent: {}
+[39.984814] (-) TimerEvent: {}
+[40.085369] (-) TimerEvent: {}
+[40.185900] (-) TimerEvent: {}
+[40.286370] (-) TimerEvent: {}
+[40.386899] (-) TimerEvent: {}
+[40.487372] (-) TimerEvent: {}
+[40.587870] (-) TimerEvent: {}
+[40.688512] (-) TimerEvent: {}
+[40.788977] (-) TimerEvent: {}
+[40.889406] (-) TimerEvent: {}
+[40.989802] (-) TimerEvent: {}
+[41.090269] (-) TimerEvent: {}
+[41.190756] (-) TimerEvent: {}
+[41.291206] (-) TimerEvent: {}
+[41.391747] (-) TimerEvent: {}
+[41.492224] (-) TimerEvent: {}
+[41.592680] (-) TimerEvent: {}
+[41.693229] (-) TimerEvent: {}
+[41.793635] (-) TimerEvent: {}
+[41.894101] (-) TimerEvent: {}
+[41.994635] (-) TimerEvent: {}
+[42.095230] (-) TimerEvent: {}
+[42.195770] (-) TimerEvent: {}
+[42.296209] (-) TimerEvent: {}
+[42.396696] (-) TimerEvent: {}
+[42.497158] (-) TimerEvent: {}
+[42.597625] (-) TimerEvent: {}
+[42.697984] (-) TimerEvent: {}
+[42.798467] (-) TimerEvent: {}
+[42.898951] (-) TimerEvent: {}
+[42.999408] (-) TimerEvent: {}
+[43.099780] (-) TimerEvent: {}
+[43.200273] (-) TimerEvent: {}
+[43.300861] (-) TimerEvent: {}
+[43.401349] (-) TimerEvent: {}
+[43.501725] (-) TimerEvent: {}
+[43.602167] (-) TimerEvent: {}
+[43.702598] (-) TimerEvent: {}
+[43.803011] (-) TimerEvent: {}
+[43.903383] (-) TimerEvent: {}
+[44.003809] (-) TimerEvent: {}
+[44.104163] (-) TimerEvent: {}
+[44.204635] (-) TimerEvent: {}
+[44.305024] (-) TimerEvent: {}
+[44.405496] (-) TimerEvent: {}
+[44.505901] (-) TimerEvent: {}
+[44.606258] (-) TimerEvent: {}
+[44.706665] (-) TimerEvent: {}
+[44.807111] (-) TimerEvent: {}
+[44.907644] (-) TimerEvent: {}
+[45.008008] (-) TimerEvent: {}
+[45.108351] (-) TimerEvent: {}
+[45.208697] (-) TimerEvent: {}
+[45.309096] (-) TimerEvent: {}
+[45.409454] (-) TimerEvent: {}
+[45.509831] (-) TimerEvent: {}
+[45.610237] (-) TimerEvent: {}
+[45.710676] (-) TimerEvent: {}
+[45.811162] (-) TimerEvent: {}
+[45.911544] (-) TimerEvent: {}
+[46.011905] (-) TimerEvent: {}
+[46.112405] (-) TimerEvent: {}
+[46.212773] (-) TimerEvent: {}
+[46.313276] (-) TimerEvent: {}
+[46.413655] (-) TimerEvent: {}
+[46.514018] (-) TimerEvent: {}
+[46.614497] (-) TimerEvent: {}
+[46.714863] (-) TimerEvent: {}
+[46.815552] (-) TimerEvent: {}
+[46.916379] (-) TimerEvent: {}
+[47.016867] (-) TimerEvent: {}
+[47.117270] (-) TimerEvent: {}
+[47.217704] (-) TimerEvent: {}
+[47.318087] (-) TimerEvent: {}
+[47.418429] (-) TimerEvent: {}
+[47.518812] (-) TimerEvent: {}
+[47.619245] (-) TimerEvent: {}
+[47.719618] (-) TimerEvent: {}
+[47.820031] (-) TimerEvent: {}
+[47.920386] (-) TimerEvent: {}
+[48.020745] (-) TimerEvent: {}
+[48.121240] (-) TimerEvent: {}
+[48.221601] (-) TimerEvent: {}
+[48.322012] (-) TimerEvent: {}
+[48.422409] (-) TimerEvent: {}
+[48.522946] (-) TimerEvent: {}
+[48.623367] (-) TimerEvent: {}
+[48.723849] (-) TimerEvent: {}
+[48.824258] (-) TimerEvent: {}
+[48.924627] (-) TimerEvent: {}
+[49.025146] (-) TimerEvent: {}
+[49.125499] (-) TimerEvent: {}
+[49.225851] (-) TimerEvent: {}
+[49.326293] (-) TimerEvent: {}
+[49.426664] (-) TimerEvent: {}
+[49.527051] (-) TimerEvent: {}
+[49.627417] (-) TimerEvent: {}
+[49.727931] (-) TimerEvent: {}
+[49.828539] (-) TimerEvent: {}
+[49.928982] (-) TimerEvent: {}
+[50.029468] (-) TimerEvent: {}
+[50.130122] (-) TimerEvent: {}
+[50.230492] (-) TimerEvent: {}
+[50.330929] (-) TimerEvent: {}
+[50.431570] (-) TimerEvent: {}
+[50.532293] (-) TimerEvent: {}
+[50.632996] (-) TimerEvent: {}
+[50.733427] (-) TimerEvent: {}
+[50.833875] (-) TimerEvent: {}
+[50.934285] (-) TimerEvent: {}
+[51.034730] (-) TimerEvent: {}
+[51.135096] (-) TimerEvent: {}
+[51.235563] (-) TimerEvent: {}
+[51.335921] (-) TimerEvent: {}
+[51.436271] (-) TimerEvent: {}
+[51.536605] (-) TimerEvent: {}
+[51.636969] (-) TimerEvent: {}
+[51.737337] (-) TimerEvent: {}
+[51.837679] (-) TimerEvent: {}
+[51.938033] (-) TimerEvent: {}
+[52.038365] (-) TimerEvent: {}
+[52.138707] (-) TimerEvent: {}
+[52.239075] (-) TimerEvent: {}
+[52.339573] (-) TimerEvent: {}
+[52.439938] (-) TimerEvent: {}
+[52.540301] (-) TimerEvent: {}
+[52.640644] (-) TimerEvent: {}
+[52.741029] (-) TimerEvent: {}
+[52.841355] (-) TimerEvent: {}
+[52.941669] (-) TimerEvent: {}
+[53.042050] (-) TimerEvent: {}
+[53.142417] (-) TimerEvent: {}
+[53.242752] (-) TimerEvent: {}
+[53.343114] (-) TimerEvent: {}
+[53.443522] (-) TimerEvent: {}
+[53.543899] (-) TimerEvent: {}
+[53.644314] (-) TimerEvent: {}
+[53.744851] (-) TimerEvent: {}
+[53.845337] (-) TimerEvent: {}
+[53.945784] (-) TimerEvent: {}
+[54.046225] (-) TimerEvent: {}
+[54.146694] (-) TimerEvent: {}
+[54.247219] (-) TimerEvent: {}
+[54.347791] (-) TimerEvent: {}
+[54.448461] (-) TimerEvent: {}
+[54.549184] (-) TimerEvent: {}
+[54.649579] (-) TimerEvent: {}
+[54.749924] (-) TimerEvent: {}
+[54.850437] (-) TimerEvent: {}
+[54.950904] (-) TimerEvent: {}
+[55.051360] (-) TimerEvent: {}
+[55.151781] (-) TimerEvent: {}
+[55.252164] (-) TimerEvent: {}
+[55.352558] (-) TimerEvent: {}
+[55.452996] (-) TimerEvent: {}
+[55.553336] (-) TimerEvent: {}
+[55.653730] (-) TimerEvent: {}
+[55.754428] (-) TimerEvent: {}
+[55.854879] (-) TimerEvent: {}
+[55.955244] (-) TimerEvent: {}
+[56.055720] (-) TimerEvent: {}
+[56.156105] (-) TimerEvent: {}
+[56.256407] (-) TimerEvent: {}
+[56.356706] (-) TimerEvent: {}
+[56.457042] (-) TimerEvent: {}
+[56.557455] (-) TimerEvent: {}
+[56.657804] (-) TimerEvent: {}
+[56.758234] (-) TimerEvent: {}
+[56.858599] (-) TimerEvent: {}
+[56.958918] (-) TimerEvent: {}
+[57.059278] (-) TimerEvent: {}
+[57.159645] (-) TimerEvent: {}
+[57.260051] (-) TimerEvent: {}
+[57.360442] (-) TimerEvent: {}
+[57.460963] (-) TimerEvent: {}
+[57.561500] (-) TimerEvent: {}
+[57.662031] (-) TimerEvent: {}
+[57.762473] (-) TimerEvent: {}
+[57.862837] (-) TimerEvent: {}
+[57.963195] (-) TimerEvent: {}
+[58.063607] (-) TimerEvent: {}
+[58.164072] (-) TimerEvent: {}
+[58.264606] (-) TimerEvent: {}
+[58.365325] (-) TimerEvent: {}
+[58.465903] (-) TimerEvent: {}
+[58.566390] (-) TimerEvent: {}
+[58.667003] (-) TimerEvent: {}
+[58.767351] (-) TimerEvent: {}
+[58.867767] (-) TimerEvent: {}
+[58.968136] (-) TimerEvent: {}
+[59.068492] (-) TimerEvent: {}
+[59.168886] (-) TimerEvent: {}
+[59.269267] (-) TimerEvent: {}
+[59.369694] (-) TimerEvent: {}
+[59.470123] (-) TimerEvent: {}
+[59.570501] (-) TimerEvent: {}
+[59.670856] (-) TimerEvent: {}
+[59.771235] (-) TimerEvent: {}
+[59.871592] (-) TimerEvent: {}
+[59.972001] (-) TimerEvent: {}
+[60.072369] (-) TimerEvent: {}
+[60.172713] (-) TimerEvent: {}
+[60.273066] (-) TimerEvent: {}
+[60.373518] (-) TimerEvent: {}
+[60.473951] (-) TimerEvent: {}
+[60.574350] (-) TimerEvent: {}
+[60.674767] (-) TimerEvent: {}
+[60.775192] (-) TimerEvent: {}
+[60.875573] (-) TimerEvent: {}
+[60.976028] (-) TimerEvent: {}
+[61.076573] (-) TimerEvent: {}
+[61.177013] (-) TimerEvent: {}
+[61.277532] (-) TimerEvent: {}
+[61.377969] (-) TimerEvent: {}
+[61.478460] (-) TimerEvent: {}
+[61.579078] (-) TimerEvent: {}
+[61.679578] (-) TimerEvent: {}
+[61.779967] (-) TimerEvent: {}
+[61.880359] (-) TimerEvent: {}
+[61.980869] (-) TimerEvent: {}
+[62.081663] (-) TimerEvent: {}
+[62.182071] (-) TimerEvent: {}
+[62.282593] (-) TimerEvent: {}
+[62.383011] (-) TimerEvent: {}
+[62.483516] (-) TimerEvent: {}
+[62.583928] (-) TimerEvent: {}
+[62.684288] (-) TimerEvent: {}
+[62.784639] (-) TimerEvent: {}
+[62.884971] (-) TimerEvent: {}
+[62.985341] (-) TimerEvent: {}
+[63.085747] (-) TimerEvent: {}
+[63.186124] (-) TimerEvent: {}
+[63.286474] (-) TimerEvent: {}
+[63.386835] (-) TimerEvent: {}
+[63.487180] (-) TimerEvent: {}
+[63.587577] (-) TimerEvent: {}
+[63.688003] (-) TimerEvent: {}
+[63.788355] (-) TimerEvent: {}
+[63.888786] (-) TimerEvent: {}
+[63.989212] (-) TimerEvent: {}
+[64.089609] (-) TimerEvent: {}
+[64.189993] (-) TimerEvent: {}
+[64.290381] (-) TimerEvent: {}
+[64.390708] (-) TimerEvent: {}
+[64.491061] (-) TimerEvent: {}
+[64.591404] (-) TimerEvent: {}
+[64.691783] (-) TimerEvent: {}
+[64.792182] (-) TimerEvent: {}
+[64.892625] (-) TimerEvent: {}
+[64.992982] (-) TimerEvent: {}
+[65.093372] (-) TimerEvent: {}
+[65.193773] (-) TimerEvent: {}
+[65.294264] (-) TimerEvent: {}
+[65.394724] (-) TimerEvent: {}
+[65.495174] (-) TimerEvent: {}
+[65.595551] (-) TimerEvent: {}
+[65.695983] (-) TimerEvent: {}
+[65.796446] (-) TimerEvent: {}
+[65.896895] (-) TimerEvent: {}
+[65.997368] (-) TimerEvent: {}
+[66.097842] (-) TimerEvent: {}
+[66.198227] (-) TimerEvent: {}
+[66.298626] (-) TimerEvent: {}
+[66.399022] (-) TimerEvent: {}
+[66.499568] (-) TimerEvent: {}
+[66.600369] (-) TimerEvent: {}
+[66.700797] (-) TimerEvent: {}
+[66.801166] (-) TimerEvent: {}
+[66.901566] (-) TimerEvent: {}
+[67.001979] (-) TimerEvent: {}
+[67.102306] (-) TimerEvent: {}
+[67.202690] (-) TimerEvent: {}
+[67.303100] (-) TimerEvent: {}
+[67.403436] (-) TimerEvent: {}
+[67.503827] (-) TimerEvent: {}
+[67.604415] (-) TimerEvent: {}
+[67.704926] (-) TimerEvent: {}
+[67.805294] (-) TimerEvent: {}
+[67.905662] (-) TimerEvent: {}
+[68.006025] (-) TimerEvent: {}
+[68.106427] (-) TimerEvent: {}
+[68.206788] (-) TimerEvent: {}
+[68.307191] (-) TimerEvent: {}
+[68.407532] (-) TimerEvent: {}
+[68.507881] (-) TimerEvent: {}
+[68.608224] (-) TimerEvent: {}
+[68.708575] (-) TimerEvent: {}
+[68.809039] (-) TimerEvent: {}
+[68.909467] (-) TimerEvent: {}
+[69.009891] (-) TimerEvent: {}
+[69.110375] (-) TimerEvent: {}
+[69.210760] (-) TimerEvent: {}
+[69.311184] (-) TimerEvent: {}
+[69.411645] (-) TimerEvent: {}
+[69.512132] (-) TimerEvent: {}
+[69.612602] (-) TimerEvent: {}
+[69.712946] (-) TimerEvent: {}
+[69.813371] (-) TimerEvent: {}
+[69.913735] (-) TimerEvent: {}
+[70.014329] (-) TimerEvent: {}
+[70.115046] (-) TimerEvent: {}
+[70.215420] (-) TimerEvent: {}
+[70.315789] (-) TimerEvent: {}
+[70.416181] (-) TimerEvent: {}
+[70.516577] (-) TimerEvent: {}
+[70.617138] (-) TimerEvent: {}
+[70.717517] (-) TimerEvent: {}
+[70.817891] (-) TimerEvent: {}
+[70.918222] (-) TimerEvent: {}
+[71.018584] (-) TimerEvent: {}
+[71.118946] (-) TimerEvent: {}
+[71.219387] (-) TimerEvent: {}
+[71.319773] (-) TimerEvent: {}
+[71.420111] (-) TimerEvent: {}
+[71.520555] (-) TimerEvent: {}
+[71.620958] (-) TimerEvent: {}
+[71.721406] (-) TimerEvent: {}
+[71.821794] (-) TimerEvent: {}
+[71.922163] (-) TimerEvent: {}
+[72.022696] (-) TimerEvent: {}
+[72.123080] (-) TimerEvent: {}
+[72.223605] (-) TimerEvent: {}
+[72.324045] (-) TimerEvent: {}
+[72.424417] (-) TimerEvent: {}
+[72.524817] (-) TimerEvent: {}
+[72.625246] (-) TimerEvent: {}
+[72.725738] (-) TimerEvent: {}
+[72.826100] (-) TimerEvent: {}
+[72.926450] (-) TimerEvent: {}
+[73.026832] (-) TimerEvent: {}
+[73.127261] (-) TimerEvent: {}
+[73.227727] (-) TimerEvent: {}
+[73.328141] (-) TimerEvent: {}
+[73.428582] (-) TimerEvent: {}
+[73.529142] (-) TimerEvent: {}
+[73.629575] (-) TimerEvent: {}
+[73.729963] (-) TimerEvent: {}
+[73.830435] (-) TimerEvent: {}
+[73.930896] (-) TimerEvent: {}
+[74.031449] (-) TimerEvent: {}
+[74.132092] (-) TimerEvent: {}
+[74.232581] (-) TimerEvent: {}
+[74.332931] (-) TimerEvent: {}
+[74.433453] (-) TimerEvent: {}
+[74.533814] (-) TimerEvent: {}
+[74.634166] (-) TimerEvent: {}
+[74.734595] (-) TimerEvent: {}
+[74.835147] (-) TimerEvent: {}
+[74.935608] (-) TimerEvent: {}
+[75.035967] (-) TimerEvent: {}
+[75.136366] (-) TimerEvent: {}
+[75.236792] (-) TimerEvent: {}
+[75.337320] (-) TimerEvent: {}
+[75.437696] (-) TimerEvent: {}
+[75.538057] (-) TimerEvent: {}
+[75.638429] (-) TimerEvent: {}
+[75.738851] (-) TimerEvent: {}
+[75.839287] (-) TimerEvent: {}
+[75.939667] (-) TimerEvent: {}
+[76.040112] (-) TimerEvent: {}
+[76.140532] (-) TimerEvent: {}
+[76.240883] (-) TimerEvent: {}
+[76.341358] (-) TimerEvent: {}
+[76.441734] (-) TimerEvent: {}
+[76.542138] (-) TimerEvent: {}
+[76.642535] (-) TimerEvent: {}
+[76.742973] (-) TimerEvent: {}
+[76.843532] (-) TimerEvent: {}
+[76.944046] (-) TimerEvent: {}
+[77.044494] (-) TimerEvent: {}
+[77.145004] (-) TimerEvent: {}
+[77.245507] (-) TimerEvent: {}
+[77.346016] (-) TimerEvent: {}
+[77.446815] (-) TimerEvent: {}
+[77.547283] (-) TimerEvent: {}
+[77.647972] (-) TimerEvent: {}
+[77.748710] (-) TimerEvent: {}
+[77.849471] (-) TimerEvent: {}
+[77.949880] (-) TimerEvent: {}
+[78.050277] (-) TimerEvent: {}
+[78.150927] (-) TimerEvent: {}
+[78.251377] (-) TimerEvent: {}
+[78.351945] (-) TimerEvent: {}
+[78.452406] (-) TimerEvent: {}
+[78.552763] (-) TimerEvent: {}
+[78.653188] (-) TimerEvent: {}
+[78.753592] (-) TimerEvent: {}
+[78.853951] (-) TimerEvent: {}
+[78.954284] (-) TimerEvent: {}
+[79.054738] (-) TimerEvent: {}
+[79.155181] (-) TimerEvent: {}
+[79.255627] (-) TimerEvent: {}
+[79.355994] (-) TimerEvent: {}
+[79.456322] (-) TimerEvent: {}
+[79.556767] (-) TimerEvent: {}
+[79.657199] (-) TimerEvent: {}
+[79.757578] (-) TimerEvent: {}
+[79.857912] (-) TimerEvent: {}
+[79.958369] (-) TimerEvent: {}
+[80.058721] (-) TimerEvent: {}
+[80.159123] (-) TimerEvent: {}
+[80.259588] (-) TimerEvent: {}
+[80.359976] (-) TimerEvent: {}
+[80.460393] (-) TimerEvent: {}
+[80.560852] (-) TimerEvent: {}
+[80.661381] (-) TimerEvent: {}
+[80.761785] (-) TimerEvent: {}
+[80.862336] (-) TimerEvent: {}
+[80.962772] (-) TimerEvent: {}
+[81.063207] (-) TimerEvent: {}
+[81.163650] (-) TimerEvent: {}
+[81.264048] (-) TimerEvent: {}
+[81.364428] (-) TimerEvent: {}
+[81.464942] (-) TimerEvent: {}
+[81.565384] (-) TimerEvent: {}
+[81.665740] (-) TimerEvent: {}
+[81.766164] (-) TimerEvent: {}
+[81.866508] (-) TimerEvent: {}
+[81.966816] (-) TimerEvent: {}
+[82.067285] (-) TimerEvent: {}
+[82.167633] (-) TimerEvent: {}
+[82.267996] (-) TimerEvent: {}
+[82.368336] (-) TimerEvent: {}
+[82.468779] (-) TimerEvent: {}
+[82.569179] (-) TimerEvent: {}
+[82.669540] (-) TimerEvent: {}
+[82.769889] (-) TimerEvent: {}
+[82.870291] (-) TimerEvent: {}
+[82.970630] (-) TimerEvent: {}
+[83.071027] (-) TimerEvent: {}
+[83.171482] (-) TimerEvent: {}
+[83.271851] (-) TimerEvent: {}
+[83.372209] (-) TimerEvent: {}
+[83.472581] (-) TimerEvent: {}
+[83.572947] (-) TimerEvent: {}
+[83.673390] (-) TimerEvent: {}
+[83.773731] (-) TimerEvent: {}
+[83.874085] (-) TimerEvent: {}
+[83.974484] (-) TimerEvent: {}
+[84.074900] (-) TimerEvent: {}
+[84.175247] (-) TimerEvent: {}
+[84.275698] (-) TimerEvent: {}
+[84.376069] (-) TimerEvent: {}
+[84.476452] (-) TimerEvent: {}
+[84.576861] (-) TimerEvent: {}
+[84.677304] (-) TimerEvent: {}
+[84.777860] (-) TimerEvent: {}
+[84.878294] (-) TimerEvent: {}
+[84.978725] (-) TimerEvent: {}
+[85.079311] (-) TimerEvent: {}
+[85.179810] (-) TimerEvent: {}
+[85.280381] (-) TimerEvent: {}
+[85.381113] (-) TimerEvent: {}
+[85.481797] (-) TimerEvent: {}
+[85.582186] (-) TimerEvent: {}
+[85.682585] (-) TimerEvent: {}
+[85.782931] (-) TimerEvent: {}
+[85.883400] (-) TimerEvent: {}
+[85.983763] (-) TimerEvent: {}
+[86.084149] (-) TimerEvent: {}
+[86.184507] (-) TimerEvent: {}
+[86.284895] (-) TimerEvent: {}
+[86.385279] (-) TimerEvent: {}
+[86.485759] (-) TimerEvent: {}
+[86.586210] (-) TimerEvent: {}
+[86.686693] (-) TimerEvent: {}
+[86.787085] (-) TimerEvent: {}
+[86.887522] (-) TimerEvent: {}
+[86.987912] (-) TimerEvent: {}
+[87.088307] (-) TimerEvent: {}
+[87.188757] (-) TimerEvent: {}
+[87.289210] (-) TimerEvent: {}
+[87.389626] (-) TimerEvent: {}
+[87.490006] (-) TimerEvent: {}
+[87.590358] (-) TimerEvent: {}
+[87.690719] (-) TimerEvent: {}
+[87.791060] (-) TimerEvent: {}
+[87.891410] (-) TimerEvent: {}
+[87.991763] (-) TimerEvent: {}
+[88.092169] (-) TimerEvent: {}
+[88.192590] (-) TimerEvent: {}
+[88.292928] (-) TimerEvent: {}
+[88.393350] (-) TimerEvent: {}
+[88.493763] (-) TimerEvent: {}
+[88.594209] (-) TimerEvent: {}
+[88.687579] (tether_planner) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable devel/lib/tether_planner/tether_planner_node\x1b[0m\n'}
+[88.694392] (-) TimerEvent: {}
+[88.794870] (-) TimerEvent: {}
+[88.895339] (-) TimerEvent: {}
+[88.995800] (-) TimerEvent: {}
+[89.096273] (-) TimerEvent: {}
+[89.196762] (-) TimerEvent: {}
+[89.297260] (-) TimerEvent: {}
+[89.397750] (-) TimerEvent: {}
+[89.498142] (-) TimerEvent: {}
+[89.598876] (-) TimerEvent: {}
+[89.699345] (-) TimerEvent: {}
+[89.799746] (-) TimerEvent: {}
+[89.900230] (-) TimerEvent: {}
+[90.000791] (-) TimerEvent: {}
+[90.101302] (-) TimerEvent: {}
+[90.201688] (-) TimerEvent: {}
+[90.302056] (-) TimerEvent: {}
+[90.402420] (-) TimerEvent: {}
+[90.502810] (-) TimerEvent: {}
+[90.603250] (-) TimerEvent: {}
+[90.703725] (-) TimerEvent: {}
+[90.804068] (-) TimerEvent: {}
+[90.904423] (-) TimerEvent: {}
+[91.004823] (-) TimerEvent: {}
+[91.105202] (-) TimerEvent: {}
+[91.205715] (-) TimerEvent: {}
+[91.306071] (-) TimerEvent: {}
+[91.363242] (tether_planner) StdoutLine: {'line': b'[100%] Built target tether_planner_node\n'}
+[91.368536] (tether_planner) CommandEnded: {'returncode': 0}
+[91.371792] (tether_planner) JobProgress: {'identifier': 'tether_planner', 'progress': "build target 'tests'"}
+[91.372408] (tether_planner) Command: {'cmd': ['/opt/cmake-3.22.1/bin/cmake', '--build', '/home/hakim/tether_planning_ws/src/tether_planner/build/tether_planner', '--target', 'tests', '--', '-j16', '-l16'], 'cwd': '/home/hakim/tether_planning_ws/src/tether_planner/build/tether_planner', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hakim'), ('ROS_PACKAGE_PATH', '/home/hakim/tether_planning_ws/src/bluerov2_nmpc:/home/hakim/tether_planning_ws/src/bluerov2_trajectory:/home/hakim/tether_planning_ws/src/ea_mpc:/home/hakim/tether_planning_ws/src/motion_capture_system/mocap_base:/home/hakim/tether_planning_ws/src/motion_capture_system/mocap_qualisys:/home/hakim/tether_planning_ws/src/motion_capture_system/mocap_vicon:/home/hakim/tether_planning_ws/src/tether_planner:/opt/ros/noetic/share'), ('GIT_ASKPASS', '/home/hakim/.vscode-server/bin/91fa95bccb027ece6a968589bb1d662fa9c8e170/extensions/git/dist/askpass.sh'), ('ROS_ETC_DIR', '/opt/ros/noetic/etc/ros'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/home/hakim/tether_planning_ws/devel/lib:/opt/ros/noetic/lib:/usr/local/cuda-12.4/lib64:/usr/local/cuda-12.4/lib64:/usr/local/cuda-12.4/lib64'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/hakim'), ('OLDPWD', '/home/hakim/tether_planning_ws/src'), ('TERM_PROGRAM_VERSION', '1.100.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-89e5c150-06f8-4d21-9036-8fee3412e751.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/hakim/.vscode-server/bin/91fa95bccb027ece6a968589bb1d662fa9c8e170/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/hakim/.vscode-server/bin/91fa95bccb027ece6a968589bb1d662fa9c8e170/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/hakim/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-x64/bundled/libs/debugpy'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('WSL_DISTRO_NAME', 'Ubuntu-20.04'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'noetic'), ('LOGNAME', 'hakim'), ('NAME', 'Code'), ('WSL_INTEROP', '/run/WSL/1288_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '1'), ('PKG_CONFIG_PATH', '/home/hakim/tether_planning_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig'), ('TERM', 'xterm-256color'), ('PATH', '/opt/ros/noetic/bin:/usr/local/cuda-12.4/bin:/opt/cmake-3.22.1/bin:/home/hakim/.vscode-server/bin/91fa95bccb027ece6a968589bb1d662fa9c8e170/bin/remote-cli:/usr/local/cuda-12.4/bin:/opt/cmake-3.22.1/bin:/home/hakim/.local/bin:/usr/local/cuda-12.4/bin:/opt/cmake-3.22.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/TortoiseSVN/bin:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/aha/AppData/Local/Programs/Python/Python313:/mnt/c/Users/aha/AppData/Local/anaconda3/Scripts:/mnt/c/Users/aha/AppData/Local/anaconda3/:/mnt/c/Users/aha/AppData/Local/anaconda3/Library/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/socat-1.7.3.0:/mnt/c/Users/aha/AppData/Local/Programs/Python/Python313/Scripts/:/mnt/c/Users/aha/AppData/Local/Programs/Python/Python313/:/mnt/c/Users/aha/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/aha/AppData/Local/Microsoft/WindowsApps:/mnt/c/texlive/2024/bin/windows:/mnt/c/cygwin/bin:/snap/bin:/home/hakim/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-x64/bundled/scripts/noConfigScripts:/home/hakim/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/hakim/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-f87ade50c07665ae.txt'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('ROSLISP_PACKAGE_DIRECTORIES', '/home/hakim/tether_planning_ws/devel/share/common-lisp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-7949cb36df.sock'), ('ROS_ROOT', '/opt/ros/noetic/share/ros'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '0'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:2f03f8ea-6aa0-4021-a692-c9555e514c6d'), ('ROS_MASTER_URI', 'http://localhost:11311'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/hakim/tether_planning_ws/src/tether_planner/build/tether_planner'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/hakim/tether_planning_ws/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('VTE_VERSION', '6003'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/hakim/tether_planning_ws/devel:/opt/ros/noetic'), ('WSLENV', 'ELECTRON_RUN_AS_NODE/w:')]), 'shell': False}
+[91.391742] (tether_planner) StdoutLine: {'line': b'Built target tests\n'}
+[91.395135] (tether_planner) CommandEnded: {'returncode': 0}
+[91.396381] (tether_planner) JobProgress: {'identifier': 'tether_planner', 'progress': 'install'}
+[91.402744] (tether_planner) Command: {'cmd': ['/opt/cmake-3.22.1/bin/cmake', '--install', '/home/hakim/tether_planning_ws/src/tether_planner/build/tether_planner'], 'cwd': '/home/hakim/tether_planning_ws/src/tether_planner/build/tether_planner', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'hakim'), ('ROS_PACKAGE_PATH', '/home/hakim/tether_planning_ws/src/bluerov2_nmpc:/home/hakim/tether_planning_ws/src/bluerov2_trajectory:/home/hakim/tether_planning_ws/src/ea_mpc:/home/hakim/tether_planning_ws/src/motion_capture_system/mocap_base:/home/hakim/tether_planning_ws/src/motion_capture_system/mocap_qualisys:/home/hakim/tether_planning_ws/src/motion_capture_system/mocap_vicon:/home/hakim/tether_planning_ws/src/tether_planner:/opt/ros/noetic/share'), ('GIT_ASKPASS', '/home/hakim/.vscode-server/bin/91fa95bccb027ece6a968589bb1d662fa9c8e170/extensions/git/dist/askpass.sh'), ('ROS_ETC_DIR', '/opt/ros/noetic/etc/ros'), ('SHLVL', '3'), ('LD_LIBRARY_PATH', '/home/hakim/tether_planning_ws/devel/lib:/opt/ros/noetic/lib:/usr/local/cuda-12.4/lib64:/usr/local/cuda-12.4/lib64:/usr/local/cuda-12.4/lib64'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/hakim'), ('OLDPWD', '/home/hakim/tether_planning_ws/src'), ('TERM_PROGRAM_VERSION', '1.100.1'), ('VSCODE_IPC_HOOK_CLI', '/run/user/1000/vscode-ipc-89e5c150-06f8-4d21-9036-8fee3412e751.sock'), ('ROS_PYTHON_VERSION', '3'), ('VSCODE_GIT_ASKPASS_MAIN', '/home/hakim/.vscode-server/bin/91fa95bccb027ece6a968589bb1d662fa9c8e170/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/home/hakim/.vscode-server/bin/91fa95bccb027ece6a968589bb1d662fa9c8e170/node'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('BUNDLED_DEBUGPY_PATH', '/home/hakim/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-x64/bundled/libs/debugpy'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('WSL_DISTRO_NAME', 'Ubuntu-20.04'), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator25ef4b219e3b005583550f2b0f9f990c3'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'noetic'), ('LOGNAME', 'hakim'), ('NAME', 'Code'), ('WSL_INTEROP', '/run/WSL/1288_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '1'), ('PKG_CONFIG_PATH', '/home/hakim/tether_planning_ws/devel/lib/pkgconfig:/opt/ros/noetic/lib/pkgconfig'), ('TERM', 'xterm-256color'), ('PATH', '/opt/ros/noetic/bin:/usr/local/cuda-12.4/bin:/opt/cmake-3.22.1/bin:/home/hakim/.vscode-server/bin/91fa95bccb027ece6a968589bb1d662fa9c8e170/bin/remote-cli:/usr/local/cuda-12.4/bin:/opt/cmake-3.22.1/bin:/home/hakim/.local/bin:/usr/local/cuda-12.4/bin:/opt/cmake-3.22.1/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/WINDOWS/system32:/mnt/c/WINDOWS:/mnt/c/WINDOWS/System32/Wbem:/mnt/c/WINDOWS/System32/WindowsPowerShell/v1.0/:/mnt/c/WINDOWS/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/TortoiseSVN/bin:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/aha/AppData/Local/Programs/Python/Python313:/mnt/c/Users/aha/AppData/Local/anaconda3/Scripts:/mnt/c/Users/aha/AppData/Local/anaconda3/:/mnt/c/Users/aha/AppData/Local/anaconda3/Library/bin:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Microsoft VS Code/bin:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/socat-1.7.3.0:/mnt/c/Users/aha/AppData/Local/Programs/Python/Python313/Scripts/:/mnt/c/Users/aha/AppData/Local/Programs/Python/Python313/:/mnt/c/Users/aha/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/aha/AppData/Local/Microsoft/WindowsApps:/mnt/c/texlive/2024/bin/windows:/mnt/c/cygwin/bin:/snap/bin:/home/hakim/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-x64/bundled/scripts/noConfigScripts:/home/hakim/.vscode-server/data/User/globalStorage/github.copilot-chat/debugCommand'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/hakim/.vscode-server/extensions/ms-python.debugpy-2025.8.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-f87ade50c07665ae.txt'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('ROSLISP_PACKAGE_DIRECTORIES', '/home/hakim/tether_planning_ws/devel/share/common-lisp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-7949cb36df.sock'), ('ROS_ROOT', '/opt/ros/noetic/share/ros'), ('TERM_PROGRAM', 'vscode'), ('ROS_DOMAIN_ID', '0'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:2f03f8ea-6aa0-4021-a692-c9555e514c6d'), ('ROS_MASTER_URI', 'http://localhost:11311'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('PWD', '/home/hakim/tether_planning_ws/src/tether_planner/build/tether_planner'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/hakim/tether_planning_ws/devel/lib/python3/dist-packages:/opt/ros/noetic/lib/python3/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('VTE_VERSION', '6003'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/home/hakim/tether_planning_ws/devel:/opt/ros/noetic'), ('WSLENV', 'ELECTRON_RUN_AS_NODE/w:')]), 'shell': False}
+[91.404309] (tether_planner) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[91.404977] (tether_planner) StdoutLine: {'line': b'-- Installing: /home/hakim/tether_planning_ws/src/tether_planner/install/tether_planner/lib/pkgconfig/tether_planner.pc\n'}
+[91.405358] (tether_planner) StdoutLine: {'line': b'-- Installing: /home/hakim/tether_planning_ws/src/tether_planner/install/tether_planner/share/tether_planner/cmake/tether_plannerConfig.cmake\n'}
+[91.405403] (tether_planner) StdoutLine: {'line': b'-- Installing: /home/hakim/tether_planning_ws/src/tether_planner/install/tether_planner/share/tether_planner/cmake/tether_plannerConfig-version.cmake\n'}
+[91.405542] (tether_planner) StdoutLine: {'line': b'-- Installing: /home/hakim/tether_planning_ws/src/tether_planner/install/tether_planner/share/tether_planner/package.xml\n'}
+[91.405632] (tether_planner) StdoutLine: {'line': b'-- Installing: /home/hakim/tether_planning_ws/src/tether_planner/install/tether_planner/lib/tether_planner/tether_planner_node\n'}
+[91.406196] (-) TimerEvent: {}
+[91.412354] (tether_planner) StdoutLine: {'line': b'-- Set runtime path of "/home/hakim/tether_planning_ws/src/tether_planner/install/tether_planner/lib/tether_planner/tether_planner_node" to ""\n'}
+[91.414041] (tether_planner) CommandEnded: {'returncode': 0}
+[91.443440] (tether_planner) JobEnded: {'identifier': 'tether_planner', 'rc': 0}
+[91.444719] (-) EventReactorShutdown: {}

@@ -1087,7 +1087,7 @@ void initializeGlobalVariables() {
     count = 0;
     double distanceThreshold = 10;
     //txtfilePath = "/home/hakim/tether_planning_ws/src/input_data/dfki_pipe_fc.txt";
-    txtfilePath = "/home/hakim/tether_planning_ws/src/tether_planner/input_data/dfki_pipe_fc.txt";
+    txtfilePath = "/home/hakim/tether_planning_ws/src/tether_planner/input_data/dfki_pipe_helix.txt";
 
     //nvblx_file_path = "/home/hakim/tether_planning_ws/src/tether_planner/models/pipe.nvblx";
     nvblx_file_path = "/home/hakim/tether_planning_ws/src/tether_planner/input_data/dfki_pipe.nvblx";

@@ -1,0 +1,8 @@
+prefix=/home/hakim/tether_planning_ws/src/tether_planner/install/tether_planner
+
+Name: tether_planner
+Description: Description of tether_planner
+Version: 0.0.1
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -ltether_planner
+Requires: roscpp std_msgs

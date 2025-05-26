@@ -69,19 +69,20 @@ int main(int argc, char **argv) {
   Eigen::Vector3f translation2(0.0, 0.0, 0.0); // Example translation
   //Eigen::Vector3f translation3(0.0, 0.0, -2.0); // Example translation
   Eigen::Vector3f translation3(0.0, 0.0, 3.0); // Example translation
-  Eigen::Vector3f translation_wp(0.0, -1.0, 2.5); // Example translation
+  Eigen::Vector3f translation_wp(1.0, 0.5, 3.0); // Example translation
   Eigen::Vector3f no_translation(0.0, 0.0, 0.0); // Example translation
 
   // Transform the point cloud
   transformEIVAPC( eiva_pcloud, translation, rotation);
-  distanceThreshold = 10.0;
+  distanceThreshold = 0.00001;
   //Eigen::Vector3f translation_local(2.0, 1.0, 7.5);
 
 
   //Eigen::Matrix3f rotation_local = Eigen::DiagonalMatrix<float, 3>(-1, -1, -1);
   scale_factor = 0.05;
+
     //transformPointCloud(cloud, scale_factor, translation_local, rotation_local);
-  loadAndTransformWaypoints(txtfilePath, distanceThreshold * 0.5, scale_factor * 1.0 ,
+  loadAndTransformWaypoints(txtfilePath, distanceThreshold * 0.5, 1.0 ,
                              translation_wp, rotation2, way_point_traj);
                              
   transformSTLModel(inspection_model_stl, 1.0, translation2, rotation);
