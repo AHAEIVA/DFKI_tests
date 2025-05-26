@@ -63,4 +63,7 @@ roslaunch bluerov2_trajectory bluerov2_trajectory.launch
 ## TODO
 -get mocap brdige node and controller inside tether_ws
 - get bluerov2 MPC to work with tether_planner 
-- test planner (no prop) 
+- test planner (no prop)
+
+### Pipe dimensions
+2m length X 0.7 m diameter
