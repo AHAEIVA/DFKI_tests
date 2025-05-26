@@ -63,6 +63,7 @@ void ref_yaw_cb(const std_msgs::Float64::ConstPtr& msg)
     ref_yaw_rad = msg->data;
 }
 
+std::string odom_source;
 void pos_cb(const nav_msgs::Odometry::ConstPtr& msg)
 {
     double roll = 0, pitch = 0, yaw = 0;
@@ -79,7 +80,13 @@ void pos_cb(const nav_msgs::Odometry::ConstPtr& msg)
     current_att_mat.setRotation(current_att_quat);
     //current_att_mat.getRPY(roll, pitch, yaw);
     current_att_mat.getRPY(pitch, roll, yaw);
-    current_pos_att = {msg->pose.pose.position.x, msg->pose.pose.position.y, msg->pose.pose.position.z, roll, pitch, yaw};
+    if (odom_source == "mobula") {
+      current_pos_att = {msg->pose.pose.position.x,
+                         -msg->pose.pose.position.y,
+                         -msg->pose.pose.position.z, roll, pitch, yaw};
+    } else {
+      current_pos_att = {msg->pose.pose.position.x, msg->pose.pose.position.y, msg->pose.pose.position.z, roll, pitch, yaw};
+    }
 }
 
 
@@ -227,7 +234,7 @@ void NMPC_PC::publish_wrench(struct command_struct& commandstruct)
 
     std_msgs::Float64 obj_val_msg;
     obj_val_msg.data = commandstruct.obj_val;
-    nmpc_cmd_obj_pub.publish(nmpc_wrench_msg);
+    nmpc_cmd_obj_pub.publish(obj_val_msg);
     
 
 }
@@ -282,7 +289,8 @@ int main(int argc, char** argv)
     ref_position_sub = nh.subscribe<geometry_msgs::Vector3>("ref_trajectory/position", 1, ref_position_cb);
     ref_velocity_sub = nh.subscribe<geometry_msgs::Vector3>("ref_trajectory/velocity", 1, ref_velocity_cb);
     ref_yaw_sub = nh.subscribe<std_msgs::Float64>("ref_trajectory/yaw", 1, ref_yaw_cb);
-    pos_sub = nh.subscribe<nav_msgs::Odometry>("/qualisys/bluerov2/odom", 1, pos_cb);
+    std::string odom_topic = (odom_source == "mobula") ? "/mobula/rov/odometry" : "/qualisys/bluerov2/odom";
+    pos_sub = nh.subscribe<nav_msgs::Odometry>(odom_topic, 1, pos_cb);
     //vel_sub = nh.subscribe<geometry_msgs::TwistStamped>("mavros/mocap/velocity_body", 1, vel_cb);
     dist_Fx_predInit_sub = nh.subscribe<std_msgs::Bool>(dist_Fx_predInit_topic, 1, dist_Fx_predInit_cb);
     dist_Fy_predInit_sub = nh.subscribe<std_msgs::Bool>(dist_Fy_predInit_topic, 1, dist_Fy_predInit_cb);
@@ -440,7 +448,7 @@ int main(int argc, char** argv)
                               current_vel_rate.at(0),
                               current_vel_rate.at(1),
                               current_vel_rate.at(2),
-                              -current_pos_att.at(5),
+                              (odom_source == "mobula") ? angles.at(2) : -current_pos_att.at(5),
                               current_vel_rate.at(5)
                               };
 
