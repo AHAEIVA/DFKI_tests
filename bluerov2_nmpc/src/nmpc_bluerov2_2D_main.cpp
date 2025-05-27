@@ -10,11 +10,19 @@
 #include <Eigen/Core>
 #include <Eigen/Dense>
 #include <chrono>
+#include <cmath>
 #include <thread>
 using namespace std;
 using namespace Eigen;
 using namespace ros;
 double sampleTime = 0.02;
+
+double adjust_yaw_reference(double current_yaw, double ref_yaw) {
+  double diff = ref_yaw - current_yaw;
+  while (diff > M_PI) diff -= 2 * M_PI;
+  while (diff < -M_PI) diff += 2 * M_PI;
+  return current_yaw + diff;
+}
 
 mavros_msgs::State current_state_msg;
 
@@ -470,8 +478,10 @@ int main(int argc, char** argv)
             ref_position[1] = rope_goal[1];
             ref_position[2] = rope_goal[2];
         }  
-
-
+     
+         ref_yaw_rad = rope_goal[3] ; // Convert to radians
+         ref_yaw_rad = adjust_yaw_reference((odom_source == "mobula") ? angles.at(2) : -current_pos_att.at(5), ref_yaw_rad);
+         ref_yaw_rad = 0.0 ; // Convert to radians
 
                     // ref_trajectory = {2.0,  //x
                     //                   1.0,  //y
@@ -481,7 +491,7 @@ int main(int argc, char** argv)
                     //                   ref_velocity[2],   //w
                     //                   -ref_yaw_rad,
                     //                   0.0
-                    //          };                   
+                    //          };
 
                     ref_trajectory = {ref_position[0],  //x
                                       ref_position[1],  //y
@@ -489,9 +499,9 @@ int main(int argc, char** argv)
                                       ref_velocity[0],   //u
                                       ref_velocity[1],   //v
                                       ref_velocity[2],   //w
-                                      -ref_yaw_rad,
+                                      ref_yaw_rad,
                                       0.0
-                             };               
+                             };
 
 
             std::cout << "current_states = ";
@@ -508,14 +518,23 @@ int main(int argc, char** argv)
             }
             std::cout << "\n";
 
+               std::cout << "planner goal = ";
+            for (int idx = 0; idx < rope_goal.size(); idx++)
+            {
+                std::cout << rope_goal[idx] << ",";
+            }
+            std::cout << "\n";
+
+
             
             std::cout << "ref  yaw = "<< ref_yaw_rad << std::endl ;
             std::cout << "current yaw = "<<         current_pos_att.at(5) << std::endl ;
+            std::cout << "current yaw (mobula) = "<<         angles.at(2) << std::endl ;
 
             std::cout << "hakim=122 " << std::endl ;
 
 
-
+           
 
            double F_d_max = 50;
 

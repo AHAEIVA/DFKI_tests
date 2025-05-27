@@ -565,13 +565,13 @@ ompl::geometric::PathGeometric TetherPlanner::SearchAlternativePath(
   for (int i = 3; i < tether.getStateCount()-9; i++) {
     Alternative_Path = CalculateAlternativePath_i(i, tether, goal, si);
     Alternative_Path_1 = CalculateAlternativePath_i(i-3, tether, goal, si);
-    Alternative_Path_P1 = CalculateAlternativePath_iRRT(i+8, tether, goal, si);
+    Alternative_Path_P1 = CalculateAlternativePath_iRRT(i+5, tether, goal, si);
 
 
 
     double Alternative_Path_1_Length = findTetherLength(Alternative_Path_1);
 
-    if (Alternative_Path_Tether_Length < (L_max * 0.7)) {
+    if (Alternative_Path_Tether_Length < (L_max * 0.8)) {
         // Set the exit point to the state at point i
         /*
         const auto *state_exit_ptr = tether.getState(i)->as<ompl::base::RealVectorStateSpace::StateType>();
@@ -593,7 +593,7 @@ ompl::geometric::PathGeometric TetherPlanner::SearchAlternativePath(
         Alternative_Path_P1.append(PathFromExitToGoal);
       */
 
-        if (Alternative_Path_Tether_Length < Alternative_Path_1_Length*0.65 ) {
+        if (Alternative_Path_Tether_Length < Alternative_Path_1_Length*0.8 ) {
           if(i<3){
           Alternative_Path_P1 = CalculateAlternativePath_iRRT(tether.getStateCount()-1, tether, goal, si);
           }

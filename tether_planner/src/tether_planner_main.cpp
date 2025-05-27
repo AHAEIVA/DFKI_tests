@@ -7,6 +7,29 @@
 #include <string>
 #include <yaml-cpp/yaml.h>
 
+void transformWaypointsAndPointCloud(pcl::PointCloud<pcl::PointXYZ>::Ptr cloud,
+                                     std::vector<std::vector<double> >& way_point_traj,
+                                     const Eigen::Vector3f& translation,
+                                     const Eigen::Matrix3f& rotation) {
+  // Transform point cloud
+  for (pcl::PointXYZ& point : cloud->points) {
+    Eigen::Vector3f eigen_point(point.x, point.y, point.z);
+    eigen_point = rotation * eigen_point + translation;
+    point.x = eigen_point[0];
+    point.y = eigen_point[1];
+    point.z = eigen_point[2];
+  }
+
+  // Transform waypoints
+  for (auto& waypoint : way_point_traj) {
+    Eigen::Vector3f eigen_waypoint(waypoint[0], waypoint[1], waypoint[2]);
+    eigen_waypoint = rotation * eigen_waypoint + translation;
+    waypoint[0] = eigen_waypoint[0];
+    waypoint[1] = eigen_waypoint[1];
+    waypoint[2] = eigen_waypoint[2];
+  }
+}
+
 int main(int argc, char **argv) {
   // Initialize ROS node
   ros::init(argc, argv, "tether_planner");
@@ -74,7 +97,10 @@ int main(int argc, char **argv) {
   Eigen::Vector3f translation2(0.0, 0.0, 0.0); // Example translation
   //Eigen::Vector3f translation3(0.0, 0.0, -2.0); // Example translation
   Eigen::Vector3f translation3(0.0, 0.0, 3.0); // Example translation
-  Eigen::Vector3f translation_pc(-2.0, 0.0, 3.0); // Example translation
+  //Eigen::Vector3f translation_pc(0.0, 0.0, 50.0); // Example translation
+  
+  Eigen::Vector3f translation_pc(-2.0, 0.0, 3.2); // Example translation
+
   Eigen::Vector3f translation_wp(-1.0, 0, 3.0); // Example translation
   Eigen::Vector3f no_translation(0.0, 0.0, 0.0); // Example translation
 
@@ -87,12 +113,22 @@ int main(int argc, char **argv) {
   //Eigen::Matrix3f rotation_local = Eigen::DiagonalMatrix<float, 3>(-1, -1, -1);
   scale_factor = 0.05;
 
-    //transformPointCloud(cloud, scale_factor, translation_local, rotation_local);
-  loadAndTransformWaypoints(txtfilePath, distanceThreshold * 0.5, 1.0 ,
+  //transformPointCloud(cloud , 1.0 , translation_pc, rotation);
+
+
+    loadAndTransformWaypoints(txtfilePath, distanceThreshold * 0.5, 1.0 ,
                              translation_wp, rotation2, way_point_traj);
                              
   transformSTLModel(inspection_model_stl, 1.0, translation2, rotation);
-  transformPointCloud(cloud , scale_factor *20 , translation_pc, rotation);
+  transformPointCloud(cloud , 1.0 , translation_pc, no_rotation);
+
+  // Add the new transformation function here
+  Eigen::Vector3f static_translation(1.0, 0.0, 5.0); // Example static translation
+  Eigen::Matrix3f static_rotation;
+  static_rotation << 0, 1, 0,
+                     -1, 0, 0,
+                     0, 0, 1; // Example static rotation (90 degrees around Z-axis)
+  transformWaypointsAndPointCloud(cloud, way_point_traj, static_translation, static_rotation);
 
   //transformWaypoints(way_point_traj, 1.5, 0 * translation, rotation);
 
@@ -108,8 +144,8 @@ int main(int argc, char **argv) {
    
   // Sparsify and save the point cloud
   float leaf_size = 0.02f; // Adjust the leaf size as needed
-  std::string output_pcd_file= "/home/hakim/tether_planning_ws/src/tether_planner/input_data/dfki_pipe.pcd";
-  //sparsifyAndSavePointCloud(cloud, leaf_size, output_pcd_file);
+  std::string output_pcd_file= "/home/hakim/tether_planning_ws/src/tether_planner/input_data/dfki_pipe_trans.pcd";
+  sparsifyAndSavePointCloud(cloud, leaf_size, output_pcd_file);
   // Convert the PCD file to XYZ and save it
   std::string output_xyz_file = "/home/hakim/tether_planning_ws/src/tether_planner/input_data/dfki_pipe.xyz";
   convertPCDToXYZ(output_pcd_file, output_xyz_file);
@@ -119,10 +155,12 @@ int main(int argc, char **argv) {
   //loadNvbloxModel(nvblx_file_path);
 
   //scale_factor = 1.0;
-  rotation <<  1, 0, 0,
+  rotation <<  -1, 0, 0,
                0, -1, 0,
                0, 0, -1; // Rotation matrix to negate x, y, and z
-  std::unique_ptr<nvblox::Mapper> pipe_map = mapFromPipe(1.0, rotation, translation3 );
+  Eigen::Vector3f nv_translation(0, 0.0, 0.0); // Example static translation
+             
+  std::unique_ptr<nvblox::Mapper> pipe_map = mapFromPipe(1.0, rotation, nv_translation );
   const nvblox::EsdfLayer& esdf_layer = pipe_map->esdf_layer();
   loadNvbloxModel(nvblx_file_path);
 

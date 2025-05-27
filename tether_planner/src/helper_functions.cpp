@@ -1201,16 +1201,8 @@ std::vector<ompl::base::State*> generateHelicalPath(std::shared_ptr<ompl::base::
 
 
 void sparsifyAndSavePointCloud(boost::shared_ptr<pcl::PointCloud<pcl::PointXYZ>> const& cloud, float voxel_size, const std::string& output_path) {
-  pcl::PointCloud<pcl::PointXYZ>::Ptr filtered_cloud(new pcl::PointCloud<pcl::PointXYZ>);
-
-  // Apply voxel grid filter
-  pcl::VoxelGrid<pcl::PointXYZ> voxel_filter;
-  voxel_filter.setInputCloud(cloud);
-  voxel_filter.setLeafSize(voxel_size, voxel_size, voxel_size);  // Set voxel size
-  voxel_filter.filter(*filtered_cloud);  // Apply filter
-
-  // Save the filtered point cloud to a file
-  pcl::io::savePCDFileBinary(output_path, *filtered_cloud);  // Save as PCD
+  // Save the point cloud to a file
+  pcl::io::savePCDFileBinary(output_path, *cloud);  // Save as PCD
 }
 
 
