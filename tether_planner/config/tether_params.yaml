@@ -7,9 +7,9 @@ tether:
   #nvblox_collision: 0.1
 
 initial_position:
-  x: 0.0
+  x: 2.0
   y: 2.0
-  z: 10.0
+  z: 0.0
 
 
 tether_color:

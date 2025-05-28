@@ -349,8 +349,8 @@ void pos_cb(const nav_msgs::Odometry::ConstPtr &msg) {
                       msg->twist.twist.linear.z,  msg->twist.twist.angular.x,
                       msg->twist.twist.angular.y, msg->twist.twist.angular.z};
   current_pos_att = {msg->pose.pose.position.x,
-                     msg->pose.pose.position.y,
-                     msg->pose.pose.position.z,
+                     -msg->pose.pose.position.y,
+                     -msg->pose.pose.position.z,
                      0.0,
                      0.0,
                      0.0}; // roll, pitch, yaw can be computed
@@ -381,8 +381,8 @@ void orientation_cb(const geometry_msgs::Vector3Stamped::ConstPtr &msg) {
 // Function to compute the Euclidean distance between two waypoints
 double distance(const std::vector<double> &wp1,
                 const std::vector<double> &wp2) {
-  return std::sqrt(std::pow(wp2[0] - wp1[0], 2) + // X
-                   std::pow(wp2[1] - wp1[1], 2) + // Y
+  return std::sqrt(std::pow(wp2[0] + wp1[0], 2) + // X
+                   std::pow(-wp2[1] + wp1[1], 2) + // Y
                    std::pow(wp2[2] - wp1[2], 2)); // Z
 }
 

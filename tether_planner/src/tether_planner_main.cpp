@@ -59,7 +59,9 @@ int main(int argc, char **argv) {
   initializeObstacles();
   initializePointCloud(cloud);
 
-  ros::Subscriber pos_sub = nh.subscribe<nav_msgs::Odometry>("/mobula/rov/odometry", 1, pos_cb);
+  //ros::Subscriber pos_sub = nh.subscribe<nav_msgs::Odometry>("/mobula/rov/odometry", 1, pos_cb);
+  ros::Subscriber pos_sub = nh.subscribe<nav_msgs::Odometry>("/qualisys/bluerov2/odom", 1, pos_cb); 
+
   ros::Subscriber orientation_sub = nh.subscribe<geometry_msgs::Vector3Stamped>("/mobula/rov/orientation", 1, orientation_cb);
   ros::Subscriber reset_tether_sub = nh.subscribe("reset_tether_topic", 10, reset_tether_cb);
   ros::Subscriber record_trajectory_sub = nh.subscribe("record_trajectory_topic", 10, record_trajectory_on_cb);
@@ -123,7 +125,7 @@ int main(int argc, char **argv) {
   transformPointCloud(cloud , 1.0 , translation_pc, no_rotation);
 
   // Add the new transformation function here
-  Eigen::Vector3f static_translation(1.0, 0.0, -4.0); // Example static translation
+  Eigen::Vector3f static_translation(1.0, 0.0, -5.0); // Example static translation
   Eigen::Matrix3f static_rotation;
   static_rotation << 0, 1, 0,
                      -1, 0, 0,
@@ -293,14 +295,23 @@ int main(int argc, char **argv) {
              //  way_point[2]);
     }
     double dist = distance(way_point, current_pos_att);
-    
-    ROS_INFO("waypoint list size: %d", static_cast<int>(way_point_traj.size()));
+    ROS_INFO("distance is: %.2f", dist);
+    ROS_INFO("way_point: x=%.2f, y=%.2f, z=%.2f", way_point[0], way_point[1], way_point[2]);
+    ROS_INFO("current_pos_att: x=%.2f, y=%.2f, z=%.2f", current_pos_att[0], current_pos_att[1], current_pos_att[2]);
 
-    if (dist < 0.05 &&
+    ROS_INFO("abs(way_point[0] - current_pos_att[0]): %.2f", abs(way_point[0] - current_pos_att[0]));
+    ROS_INFO("abs(way_point[1] - current_pos_att[1]): %.2f", abs(way_point[1] + current_pos_att[1]));
+    ROS_INFO("abs(way_point[2] - current_pos_att[2]): %.2f", abs(way_point[2] + current_pos_att[2]));
+
+   // ROS_INFO("waypoint list size: %d", static_cast<int>(way_point_traj.size()));
+
+    if (abs(way_point[0] - current_pos_att[0]) < 0.1 &&
+        abs(way_point[1] - current_pos_att[1]) < 0.1 &&
+        abs(way_point[2] - current_pos_att[2]) < 0.1 &&
         count < way_point_traj.size() - 1 && finding_safe_path == false) {
         ROS_INFO("Waypoint reached:");
       goal_reached = true;
-      count++; 
+      count++;
     }
     //ROS_INFO("Count: %d", count);
 
