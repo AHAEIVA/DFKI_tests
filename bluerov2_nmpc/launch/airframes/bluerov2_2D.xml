@@ -11,10 +11,10 @@
     <param name="W_u" type="double" value="0.1" /> <!-- Weight for x-velocity. -->
     <param name="W_v" type="double" value="0.1" /> <!-- Weight for y-velocity. -->
     <param name="W_w" type="double" value="0.1" /> <!-- Weight for z-velocity. -->
-    <param name="W_psi" type="double" value="1.0" /> <!-- Weight for yaw angle. -->
-    <param name="W_r" type="double" value="0.1" /> <!-- Weight for yawrate. -->
+    <param name="W_psi" type="double" value="50.0" /> <!-- Weight for yaw angle. -->
+    <param name="W_r" type="double" value=".0" /> <!-- Weight for yawrate. -->
     <param name="W_Fx" type="double" value="0.01" /> <!-- Weight for Force in x direction. -->
     <param name="W_Fy" type="double" value="0.01" /> <!-- Weight for Force in y direction. -->
     <param name="W_Fz" type="double" value="0.01" /> <!-- Weight for Force in z direction. -->
-    <param name="W_Mz" type="double" value="10.1" /> <!-- Weight for Moment about z axis. -->
+    <param name="W_Mz" type="double" value="0.1" /> <!-- Weight for Moment about z axis. -->
 </launch>

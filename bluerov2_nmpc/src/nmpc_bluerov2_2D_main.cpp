@@ -457,7 +457,7 @@ int main(int argc, char** argv)
                               current_vel_rate.at(1),
                               current_vel_rate.at(2),
                               (odom_source == "mobula") ? angles.at(2) : -current_pos_att.at(5),
-                              current_vel_rate.at(5)
+                              -current_vel_rate.at(5)
                               };
 
 
@@ -485,7 +485,7 @@ int main(int argc, char** argv)
 
          ref_yaw_rad = rope_goal[3] ; // Convert to radians
          ref_yaw_rad = adjust_yaw_reference((odom_source == "mobula") ? angles.at(2) : -current_pos_att.at(5), ref_yaw_rad);
-         ref_yaw_rad = 0.0 ; // Convert to radians
+         //ref_yaw_rad = 0.0 ; // Convert to radians
 
                     // ref_trajectory = {2.0,  //x
                     //                   1.0,  //y
