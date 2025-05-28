@@ -123,7 +123,7 @@ int main(int argc, char **argv) {
   transformPointCloud(cloud , 1.0 , translation_pc, no_rotation);
 
   // Add the new transformation function here
-  Eigen::Vector3f static_translation(1.0, 0.0, 5.0); // Example static translation
+  Eigen::Vector3f static_translation(1.0, 0.0, -4.0); // Example static translation
   Eigen::Matrix3f static_rotation;
   static_rotation << 0, 1, 0,
                      -1, 0, 0,

@@ -218,7 +218,7 @@ void NMPC_PC::publish_wrench(struct command_struct& commandstruct)
 
     nmpc_wrench_msg.torque.x =    0.0;
     nmpc_wrench_msg.torque.y =    0.0;
-    nmpc_wrench_msg.torque.z =   commandstruct.control_wrench_vec[3];
+    nmpc_wrench_msg.torque.z =  commandstruct.control_wrench_vec[3];
 
     
     // nmpc_wrench_msg.force.x =    0.0;
@@ -479,6 +479,10 @@ int main(int argc, char** argv)
             ref_position[2] = rope_goal[2];
         }  
      
+        ref_position[0] = rope_goal[0] ;
+        ref_position[1] = rope_goal[1] ;
+        ref_position[2] = rope_goal[2] ;
+
          ref_yaw_rad = rope_goal[3] ; // Convert to radians
          ref_yaw_rad = adjust_yaw_reference((odom_source == "mobula") ? angles.at(2) : -current_pos_att.at(5), ref_yaw_rad);
          ref_yaw_rad = 0.0 ; // Convert to radians
