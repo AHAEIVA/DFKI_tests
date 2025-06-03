@@ -15,13 +15,13 @@ def generate_pipe_point_cloud(pipe_density=1.0, plate_density=1.0):
     """
     
     # Pipe parameters
-    pipe_length = 2.0  # meters
-    pipe_radius = 0.35  # meters (diameter = 0.7m)
+    pipe_length = 3.0 * 10  # meters
+    pipe_radius = 0.3 * 10 # meters (diameter = 0.7m)
     
     # Support plate parameters
     plate_length = 0.5  # meters (along Y-axis)
     plate_thickness = 0.09  # meters (along X-axis)
-    plate_height = pipe_radius + 0.5  # meters (Z-axis) - extends from ground to pipe bottom + margin
+    plate_height = pipe_radius + 0.01  # meters (Z-axis) - extends from ground to pipe bottom + margin
     
     # Point cloud density parameters (base values)
     base_pipe_circumferential = 150

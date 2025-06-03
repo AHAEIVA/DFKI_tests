@@ -99,12 +99,12 @@ def generate_and_save_helical_path(
 if __name__ == '__main__':
     # --- Example Usage ---
     # Define the cylinder's properties based on the previous example
-    center_of_cylinder = np.array([0.0, 0.0, 0.0])  # (x, y, z) position
+    center_of_cylinder = np.array([0.4, 0.0, 0.0])  # (x, y, z) position
     yaw_of_cylinder = np.deg2rad(0.0)  # 45 degrees yaw
 
     # Define the desired path parameters
     safety_margin = 0.7  # meters
-    helix_pitch = 0.6    # meters for calculation, but will be 0.0 in output
+    helix_pitch = 1.2    # meters for calculation, but will be 0.0 in output
     
     # Define the output file name
     output_file = "dfki_pipe_helix.txt"

@@ -450,7 +450,7 @@ bool ompl::geometric::PathSimplifier::ropeRRTtether(PathGeometric &path, std::ve
                 // Debug print to check the size of contactPoints
                 //std::cout << "Added contact point. Number of contact points: " << contactPoints.size() << std::endl;
                 if (j > states.size() - 20){
-                popState(states[j], states.back(), 0.015);
+                popState(states[j], states.back(), 0.14);
                 }
                 if (i== 1){
               //      popState(states[j], states.back(), 0.2);

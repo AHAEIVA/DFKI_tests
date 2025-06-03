@@ -125,7 +125,15 @@ int main(int argc, char **argv) {
   transformPointCloud(cloud , 1.0 , translation_pc, no_rotation);
 
   // Add the new transformation function here
-  Eigen::Vector3f static_translation(1.0, 0.0, -5.0); // Example static translation
+  //Eigen::Vector3f static_translation(1.0, 0.0, -5.0); // Example static translation
+  Eigen::Vector3f static_translation(2.0, -0.5, -5.6); // Example static translation
+  /// ---------> x
+
+  ////  |
+  ////  | y
+
+  // up is positive z
+
   Eigen::Matrix3f static_rotation;
   static_rotation << 0, 1, 0,
                      -1, 0, 0,
@@ -473,7 +481,9 @@ if (finding_safe_path) {
      if (finding_safe_path==true && path_is_safe == true) {
        way_point = planner.getPointAlongPath(PathSafe, i_safe_path);
       
-       if (distance(way_point, current_pos_att) < 0.1){
+       if (abs(way_point[0] - current_pos_att[0]) < 0.1 &&
+        abs(way_point[1] - current_pos_att[1]) < 0.1 &&
+        abs(way_point[2] - current_pos_att[2]) < 0.1 ){
        i_safe_path++;
       }
     }
