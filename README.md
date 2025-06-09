@@ -63,8 +63,8 @@ roslaunch bluerov2_trajectory bluerov2_trajectory.launch
 ### Recording Data
 
 ```bash
-rosrun topic_tools throttle messages /my_topic /my_topic_throttled 5.0
-rosbag record /my_topic_throttled
+rosbag record -O my_data.bag /tether_path /qualisys/bluerov2/odom
+
 ```
 
 
