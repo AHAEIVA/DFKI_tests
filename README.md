@@ -60,6 +60,14 @@ roslaunch bluerov2_nmpc bluerov2_nmpc.launch
 roslaunch bluerov2_trajectory bluerov2_trajectory.launch
 ```
 
+### Recording Data
+
+```bash
+rosrun topic_tools throttle messages /my_topic /my_topic_throttled 5.0
+rosbag record /my_topic_throttled
+```
+
+
 ## TODO
 -get mocap brdige node and controller inside tether_ws
 - get bluerov2 MPC to work with tether_planner 
