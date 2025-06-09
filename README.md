@@ -28,7 +28,7 @@ Navigate to your `mocap_ws`:
 ```bash
 cd ~/mocap_ws
 source devel/setup.bash
-roslaunch mocap_qualisys qualisys.launch server_address:="192.168.0.154" udp_port:=-1
+roslaunch mocap_qualisys qualisys.launch server_address:="192.168.128.211" udp_port:=-1
 ```
 
 **Note**: Make sure you're connected via Ethernet cable to the Qualisys computer.
